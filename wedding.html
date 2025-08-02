@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Blouses Collection | Elegant Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles specific to category pages */
+        .category-banner {
+            height: 40vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/wedding-banner.svg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .category-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-description {
+            padding: 60px 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .category-description p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+
+        
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 5% 80px;
+        }
+        
+        /* Laptop view - 3 column grid */
+        @media (min-width: 992px) and (max-width: 1400px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #d4af37;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(20px);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/elegant-logo.svg" alt="Elegant Designs Logo">
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="all-collections.html">All Collections</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-logo">
+                    <img src="images/elegant-logo.svg" alt="Elegant Designs Logo" />
+                    <h3>Elegant Designs</h3>
+                </div>
+            </div>
+            
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="index.html#categories"><i class="fas fa-th-large"></i>Categories</a></li>
+                <li><a href="all-collections.html"><i class="fas fa-shopping-bag"></i>All Collections</a></li>
+                <li><a href="index.html#featured"><i class="fas fa-star"></i>Featured</a></li>
+                <li><a href="index.html#about"><i class="fas fa-info-circle"></i>About Us</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+            
+            <div class="mobile-nav-footer">
+                <div class="mobile-nav-contact">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +91 7675971677</p>
+                    <p><i class="fas fa-envelope"></i> info@elegantdesigns.com</p>
+                </div>
+                <div class="mobile-nav-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay"></div>
+    </header>
+
+    <section class="category-banner">
+        <div>
+            <h1>Wedding Blouses Collection</h1>
+            <p>Exquisite bridal blouses with intricate maggam work, perfect for your special day</p>
+        </div>
+    </section>
+
+    <section class="category-description">
+        <h2 class="section-title">Bridal Elegance</h2>
+        <p>Our wedding blouse collection features stunning designs that combine traditional craftsmanship with contemporary aesthetics. Each piece is meticulously handcrafted with intricate maggam work, zardozi, and embellishments to create a masterpiece worthy of your special day.</p>
+        <p>These blouses are made with premium fabrics like silk, velvet, and organza, ensuring comfort and elegance. Our designs can be customized to match your wedding saree and personal style preferences.</p>
+        
+        <!-- Filter Container -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Designs</button>
+            <button class="filter-btn" data-filter="silk">Silk</button>
+            <button class="filter-btn" data-filter="velvet">Velvet</button>
+            <button class="filter-btn" data-filter="zardozi">Zardozi</button>
+            <button class="filter-btn" data-filter="stonework">Stone Work</button>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="design-card" data-category="silk zardozi">
+            <div class="design-image">
+                <img src="images/wedding-1.svg" alt="Bridal Silk Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Royal Bridal Silk</h3>
+                <p>Luxurious silk with gold zardozi work</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Royal%20Bridal%20Silk%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="design-card" data-category="velvet stonework">
+            <div class="design-image">
+                <img src="images/wedding-2.svg" alt="Velvet Bridal Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Regal Velvet</h3>
+                <p>Rich velvet with kundan and stone work</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Regal%20Velvet%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="design-card" data-category="silk stonework">
+            <div class="design-image">
+                <img src="images/wedding-3.svg" alt="Embellished Silk Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Pearl Elegance</h3>
+                <p>Silk blouse with pearl and crystal work</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Pearl%20Elegance%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="design-card" data-category="velvet zardozi">
+            <div class="design-image">
+                <img src="images/wedding-4.svg" alt="Zardozi Velvet Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Golden Heritage</h3>
+                <p>Velvet blouse with traditional zardozi</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Golden%20Heritage%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="design-card" data-category="silk zardozi">
+            <div class="design-image">
+                <img src="images/wedding-5.svg" alt="Red Bridal Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Crimson Bride</h3>
+                <p>Red silk with gold thread work</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Crimson%20Bride%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="design-card" data-category="silk stonework">
+            <div class="design-image">
+                <img src="images/wedding-6.svg" alt="Embellished Wedding Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Crystal Symphony</h3>
+                <p>Silk blouse with crystal and bead work</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Crystal%20Symphony%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Elegant Designs</h2>
+                <p>Exquisite Blouses & Maggam Work</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="all-collections.html">All Collections</a></li>
+                    <li><a href="index.html#featured">Featured</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest designs and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Elegant Designs. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const designCards = document.querySelectorAll('.design-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    designCards.forEach(card => {
+                        if(filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            
+                            if(categories.includes(filterValue)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Back to top button functionality
+            const backToTopBtn = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if(window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="bottom-nav.js"></script>
+</body>
+</html>

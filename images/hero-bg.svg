@@ -1,0 +1,49 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6a3093" />
+      <stop offset="100%" stop-color="#a044ff" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rectangle -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  
+  <!-- Decorative elements -->
+  <g opacity="0.2" fill="#ffffff">
+    <!-- Stylized blouse outline -->
+    <path d="M600 200 Q750 250 800 350 Q850 450 800 550 Q750 650 600 700 Q450 650 400 550 Q350 450 400 350 Q450 250 600 200 Z" stroke="#ffffff" stroke-width="3" fill="none" />
+    
+    <!-- Decorative patterns -->
+    <circle cx="600" cy="350" r="50" fill="none" stroke="#ffffff" stroke-width="2" />
+    <circle cx="600" cy="350" r="40" fill="none" stroke="#ffffff" stroke-width="2" />
+    <circle cx="600" cy="350" r="30" fill="none" stroke="#ffffff" stroke-width="2" />
+    
+    <!-- Maggam work inspired patterns -->
+    <path d="M580 320 L620 320 L620 380 L580 380 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+    <path d="M570 310 L630 310 L630 390 L570 390 Z" fill="none" stroke="#ffffff" stroke-width="1" />
+    
+    <!-- Decorative dots -->
+    <circle cx="550" cy="450" r="5" />
+    <circle cx="570" cy="470" r="5" />
+    <circle cx="590" cy="490" r="5" />
+    <circle cx="610" cy="490" r="5" />
+    <circle cx="630" cy="470" r="5" />
+    <circle cx="650" cy="450" r="5" />
+    
+    <!-- Floral patterns -->
+    <path d="M500 250 Q520 230 540 250 Q560 270 540 290 Q520 310 500 290 Q480 270 500 250 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+    <path d="M700 250 Q720 230 740 250 Q760 270 740 290 Q720 310 700 290 Q680 270 700 250 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+  </g>
+  
+  <!-- Subtle texture overlay -->
+  <rect width="100%" height="100%" fill="url(#noise)" opacity="0.05" />
+  
+  <defs>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+</svg>

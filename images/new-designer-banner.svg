@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <!-- Background with elegant pattern -->
+  <defs>
+    <pattern id="designerPattern" patternUnits="userSpaceOnUse" width="60" height="60" patternTransform="rotate(30)">
+      <path d="M0,30 L60,30" stroke="#d4a5c9" stroke-width="1" opacity="0.2"/>
+      <path d="M30,0 L30,60" stroke="#d4a5c9" stroke-width="1" opacity="0.2"/>
+    </pattern>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a2c42;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d4b68;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1200" height="400" fill="url(#bgGradient)"/>
+  <rect width="1200" height="400" fill="url(#designerPattern)"/>
+  
+  <!-- Decorative elements similar to wedding/casual style -->
+  <g opacity="0.8">
+    <!-- Decorative designer elements -->
+    <path d="M50,100 C150,50 250,150 350,100 C450,50 550,150 650,100" stroke="#d4a5c9" stroke-width="2" fill="none"/>
+    <path d="M550,300 C650,250 750,350 850,300 C950,250 1050,350 1150,300" stroke="#d4a5c9" stroke-width="2" fill="none"/>
+    
+    <!-- Stylish design elements -->
+    <circle cx="100" cy="100" r="4" fill="#d4a5c9"/>
+    <circle cx="200" cy="80" r="6" fill="#d4a5c9"/>
+    <circle cx="300" cy="100" r="4" fill="#d4a5c9"/>
+    <circle cx="400" cy="80" r="6" fill="#d4a5c9"/>
+    <circle cx="500" cy="100" r="4" fill="#d4a5c9"/>
+    <circle cx="600" cy="80" r="6" fill="#d4a5c9"/>
+    
+    <circle cx="600" cy="300" r="4" fill="#d4a5c9"/>
+    <circle cx="700" cy="320" r="6" fill="#d4a5c9"/>
+    <circle cx="800" cy="300" r="4" fill="#d4a5c9"/>
+    <circle cx="900" cy="320" r="6" fill="#d4a5c9"/>
+    <circle cx="1000" cy="300" r="4" fill="#d4a5c9"/>
+    <circle cx="1100" cy="320" r="6" fill="#d4a5c9"/>
+  </g>
+  
+  <!-- Central decorative element -->
+  <g transform="translate(600, 200)">
+    <!-- Stylized dress/blouse shape -->
+    <path d="M0,-80 C-60,-80 -80,-40 -80,0 C-80,40 -60,80 0,80 C60,80 80,40 80,0 C80,-40 60,-80 0,-80 Z" fill="none" stroke="#d4a5c9" stroke-width="3"/>
+    <path d="M-40,-40 C-20,-60 20,-60 40,-40 C60,-20 60,20 40,40 C20,60 -20,60 -40,40 C-60,20 -60,-20 -40,-40 Z" fill="none" stroke="#d4a5c9" stroke-width="2"/>
+    
+    <!-- Decorative stitching patterns -->
+    <path d="M-30,0 L30,0" stroke="#d4a5c9" stroke-width="2" stroke-dasharray="5,3"/>
+    <path d="M0,-30 L0,30" stroke="#d4a5c9" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle cx="0" cy="0" r="10" fill="#d4a5c9" opacity="0.7"/>
+  </g>
+</svg>

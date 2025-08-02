@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <!-- Background with elegant pattern -->
+  <defs>
+    <pattern id="maggamPattern" patternUnits="userSpaceOnUse" width="60" height="60" patternTransform="rotate(45)">
+      <path d="M0,30 L30,0 L60,30 L30,60 Z" fill="none" stroke="#f8d7a3" stroke-width="1" opacity="0.3"/>
+      <circle cx="30" cy="30" r="3" fill="#f8d7a3" opacity="0.4"/>
+    </pattern>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1200" height="400" fill="#8c5d42"/>
+  <rect width="1200" height="400" fill="url(#maggamPattern)"/>
+  
+  <!-- Decorative elements similar to wedding/casual style -->
+  <g opacity="0.7">
+    <!-- Decorative maggam work patterns -->
+    <path d="M100,50 C150,80 200,20 250,50 C300,80 350,20 400,50" stroke="#f8d7a3" stroke-width="3" fill="none"/>
+    <path d="M800,350 C850,320 900,380 950,350 C1000,320 1050,380 1100,350" stroke="#f8d7a3" stroke-width="3" fill="none"/>
+    
+    <!-- Decorative circles representing maggam beadwork -->
+    <circle cx="150" cy="100" r="5" fill="#f8d7a3"/>
+    <circle cx="200" cy="80" r="3" fill="#f8d7a3"/>
+    <circle cx="250" cy="100" r="5" fill="#f8d7a3"/>
+    <circle cx="300" cy="80" r="3" fill="#f8d7a3"/>
+    <circle cx="350" cy="100" r="5" fill="#f8d7a3"/>
+    
+    <circle cx="850" cy="300" r="5" fill="#f8d7a3"/>
+    <circle cx="900" cy="320" r="3" fill="#f8d7a3"/>
+    <circle cx="950" cy="300" r="5" fill="#f8d7a3"/>
+    <circle cx="1000" cy="320" r="3" fill="#f8d7a3"/>
+    <circle cx="1050" cy="300" r="5" fill="#f8d7a3"/>
+  </g>
+  
+  <!-- Central decorative element -->
+  <g transform="translate(600, 200)">
+    <path d="M-100,-50 C-80,-80 -40,-80 -20,-50 C0,-20 0,-80 20,-50 C40,-80 80,-80 100,-50 C120,-20 80,20 60,50 C40,80 -40,80 -60,50 C-80,20 -120,-20 -100,-50 Z" fill="none" stroke="#f8d7a3" stroke-width="4"/>
+    <circle cx="0" cy="0" r="15" fill="#f8d7a3"/>
+    <circle cx="-50" cy="-25" r="8" fill="#f8d7a3"/>
+    <circle cx="50" cy="-25" r="8" fill="#f8d7a3"/>
+    <circle cx="-30" cy="40" r="8" fill="#f8d7a3"/>
+    <circle cx="30" cy="40" r="8" fill="#f8d7a3"/>
+  </g>
+</svg>

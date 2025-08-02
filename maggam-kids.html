@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids Maggam Work Collection | Elegant Designs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Additional styles specific to category pages */
+      .category-banner {
+        height: 40vh;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("images/new-maggam-banner.svg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .category-banner h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .category-banner p {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .category-description {
+        padding: 60px 5%;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .category-description p {
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      .filter-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      .filter-btn {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background-color: #d4af37;
+        color: white;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 5% 80px;
+      }
+
+      /* Laptop view - 3 column grid */
+      @media (min-width: 992px) and (max-width: 1400px) {
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: #d4af37;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(20px);
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/elegant-logo.svg" alt="Elegant Designs Logo" />
+      </div>
+      <div class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="all-collections.html">All Collections</a></li>
+          <li><a href="index.html#featured">Featured</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile Navigation Menu -->
+      <nav class="mobile-nav">
+        <div class="mobile-nav-header">
+          <div class="mobile-nav-logo">
+            <img src="images/elegant-logo.svg" alt="Elegant Designs Logo" />
+            <h3>Elegant Designs</h3>
+          </div>
+        </div>
+        
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="index.html#categories"><i class="fas fa-th-large"></i>Categories</a></li>
+          <li><a href="all-collections.html"><i class="fas fa-shopping-bag"></i>All Collections</a></li>
+          <li><a href="index.html#featured"><i class="fas fa-star"></i>Featured</a></li>
+          <li><a href="index.html#about"><i class="fas fa-info-circle"></i>About Us</a></li>
+          <li><a href="index.html#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+        </ul>
+        
+        <div class="mobile-nav-footer">
+          <div class="mobile-nav-contact">
+            <h4>Get in Touch</h4>
+            <p><i class="fas fa-phone"></i> +91 7675971677</p>
+            <p><i class="fas fa-envelope"></i> info@elegantdesigns.com</p>
+          </div>
+          <div class="mobile-nav-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu-overlay"></div>
+    </header>
+
+    <section class="category-banner">
+      <div>
+        <h1>Kids Maggam Work Collection</h1>
+        <p>Delightful handcrafted maggam embroidery for little ones</p>
+      </div>
+    </section>
+
+    <section class="category-description">
+      <h2 class="section-title">Playful Artistry for Kids</h2>
+      <p>
+        Our kids maggam work collection brings the beauty of traditional South
+        Indian embroidery to children's blouses. Each piece features simplified
+        yet charming handwork created by skilled artisans who have adapted this
+        traditional craft for little ones.
+      </p>
+      <p>
+        From cute animal motifs to playful patterns and colorful designs, our
+        kids maggam work blouses combine traditional techniques with
+        child-friendly aesthetics. These pieces are perfect for special
+        occasions and celebrations.
+      </p>
+
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All Designs</button>
+        <button class="filter-btn" data-filter="floral">Floral</button>
+        <button class="filter-btn" data-filter="animal">Animal</button>
+        <button class="filter-btn" data-filter="colorful">Colorful</button>
+        <button class="filter-btn" data-filter="simple">Simple</button>
+      </div>
+    </section>
+
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="design-card" data-category="floral simple">
+        <div class="design-image">
+          <img src="images/maggam-1.svg" alt="Kids Floral Maggam Work" />
+          <div class="design-overlay">
+            <a href="#" class="view-details">View Details</a>
+          </div>
+        </div>
+        <div class="design-info">
+          <h3>Little Blooms</h3>
+          <p>Simple floral maggam work with colorful threads</p>
+          <a
+            href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Little%20Blooms%20Kids%20Maggam%20Work"
+            class="whatsapp-btn"
+          >
+            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="design-card" data-category="animal colorful">
+        <div class="design-image">
+          <img src="images/maggam-2.svg" alt="Kids Animal Maggam Work" />
+          <div class="design-overlay">
+            <a href="#" class="view-details">View Details</a>
+          </div>
+        </div>
+        <div class="design-info">
+          <h3>Playful Butterfly</h3>
+          <p>Cute butterfly design with vibrant threads</p>
+          <a
+            href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Playful%20Butterfly%20Kids%20Maggam%20Work"
+            class="whatsapp-btn"
+          >
+            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="design-card" data-category="simple">
+        <div class="design-image">
+          <img src="images/maggam-3.svg" alt="Kids Simple Maggam Work" />
+          <div class="design-overlay">
+            <a href="#" class="view-details">View Details</a>
+          </div>
+        </div>
+        <div class="design-info">
+          <h3>Sweet Patterns</h3>
+          <p>Simple patterns with traditional technique</p>
+          <a
+            href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Sweet%20Patterns%20Kids%20Maggam%20Work"
+            class="whatsapp-btn"
+          >
+            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="design-card" data-category="animal simple">
+        <div class="design-image">
+          <img src="images/maggam-4.svg" alt="Kids Animal Maggam Work" />
+          <div class="design-overlay">
+            <a href="#" class="view-details">View Details</a>
+          </div>
+        </div>
+        <div class="design-info">
+          <h3>Little Bird</h3>
+          <p>Cute bird motif with simple embroidery</p>
+          <a
+            href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Little%20Bird%20Kids%20Maggam%20Work"
+            class="whatsapp-btn"
+          >
+            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="design-card" data-category="floral colorful">
+        <div class="design-image">
+          <img src="images/maggam-5.svg" alt="Kids Floral Maggam Work" />
+          <div class="design-overlay">
+            <a href="#" class="view-details">View Details</a>
+          </div>
+        </div>
+        <div class="design-info">
+          <h3>Colorful Garden</h3>
+          <p>Vibrant floral patterns for little ones</p>
+          <a
+            href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Colorful%20Garden%20Kids%20Maggam%20Work"
+            class="whatsapp-btn"
+          >
+            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="design-card" data-category="animal floral">
+        <div class="design-image">
+          <img src="images/maggam-6.svg" alt="Kids Animal Floral Maggam Work" />
+          <div class="design-overlay">
+            <a href="#" class="view-details">View Details</a>
+          </div>
+        </div>
+        <div class="design-info">
+          <h3>Bunny Garden</h3>
+          <p>Cute bunny motif surrounded by floral elements</p>
+          <a
+            href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Bunny%20Garden%20Kids%20Maggam%20Work"
+            class="whatsapp-btn"
+          >
+            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Elegant Designs</h2>
+          <p>Exquisite Blouses & Maggam Work</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="all-collections.html">All Collections</a></li>
+            <li><a href="index.html#featured">Featured</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for the latest designs and updates</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email Address" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Elegant Designs. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Filter functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const designCards = document.querySelectorAll(".design-card");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            const filter = this.getAttribute("data-filter");
+
+            designCards.forEach((card) => {
+              if (filter === "all") {
+                card.style.display = "block";
+              } else if (card.getAttribute("data-category").includes(filter)) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+
+        // Back to top button functionality
+        const backToTopButton = document.querySelector(".back-to-top");
+
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.add("visible");
+          } else {
+            backToTopButton.classList.remove("visible");
+          }
+        });
+
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script src="bottom-nav.js"></script>
+  </body>
+</html>

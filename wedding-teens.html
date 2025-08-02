@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teens Wedding Collection | Elegant Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles specific to category pages */
+        .category-banner {
+            height: 40vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/wedding-banner.svg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .category-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-description {
+            padding: 60px 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .category-description p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            padding: 0 5%;
+        }
+        
+        .filter-button {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-button:hover, .filter-button.active {
+            background-color: #333;
+            color: white;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 5%;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-details h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .product-details p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .view-details {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .view-details:hover {
+            background-color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .category-banner {
+                height: 30vh;
+            }
+            
+            .category-banner h1 {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/elegant-logo.svg" alt="Elegant Designs Logo" />
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="all-collections.html">Collections</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="category-banner">
+        <div>
+            <h1>Teens Wedding Collection</h1>
+            <p>Elegant and stylish wedding attire for teenagers</p>
+        </div>
+    </div>
+
+    <div class="category-description">
+        <p>Our teens wedding collection features elegant and age-appropriate designs perfect for young attendees at weddings and formal events. These designs combine sophistication with youthful style, ensuring teenagers look their best while feeling comfortable and confident.</p>
+        <p>Each piece is crafted with attention to detail and quality materials, creating beautiful garments that are perfect for special occasions while still being suitable for younger wearers.</p>
+    </div>
+
+    <div class="filter-container">
+        <button class="filter-button active" data-filter="all">All Designs</button>
+        <button class="filter-button" data-filter="silk">Silk</button>
+        <button class="filter-button" data-filter="georgette">Georgette</button>
+        <button class="filter-button" data-filter="crepe">Crepe</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+        <!-- Products will be dynamically loaded here -->
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Elegant Designs specializes in handcrafted blouses with exquisite designs and quality craftsmanship.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="all-collections.html">Collections</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@elegantdesigns.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Elegant Designs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <img src="images/back-to-top.svg" alt="Back to Top" />
+    </button>
+
+    <a href="https://wa.me/917675971677" class="whatsapp-float" target="_blank">
+        <img src="images/whatsapp-button.svg" alt="Chat on WhatsApp" />
+    </a>
+
+    <script src="script.js"></script>
+    <script src="bottom-nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize site configuration
+            const siteConfig = initializeSiteConfig();
+            
+            // Get products for this category and age group
+            const categoryProducts = siteConfig.products.filter(product => 
+                product.category === 'wedding' && product.ageGroup === 'teens'
+            );
+            
+            // Render products
+            renderProducts(categoryProducts);
+            
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-button');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Filter products
+                    let filteredProducts;
+                    if (filter === 'all') {
+                        filteredProducts = categoryProducts;
+                    } else {
+                        filteredProducts = categoryProducts.filter(product => 
+                            product.material === filter
+                        );
+                    }
+                    
+                    // Re-render products
+                    renderProducts(filteredProducts);
+                });
+            });
+        });
+        
+        // Function to render products
+        function renderProducts(products) {
+            const productsGrid = document.getElementById('productsGrid');
+            productsGrid.innerHTML = '';
+            
+            if (products.length === 0) {
+                productsGrid.innerHTML = '<p class="no-products">No products found matching these criteria.</p>';
+                return;
+            }
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                
+                productCard.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" />
+                        <div class="product-overlay">
+                            <a href="#" class="view-details">View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20${encodeURIComponent(product.name)}" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                        </a>
+                    </div>
+                `;
+                
+                productsGrid.appendChild(productCard);
+            });
+        }
+    </script>
+</body>
+</html>

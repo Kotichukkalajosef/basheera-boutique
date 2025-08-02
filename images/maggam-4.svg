@@ -1,0 +1,238 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f0f0" />
+      <stop offset="100%" stop-color="#e0e0e0" />
+    </linearGradient>
+    <linearGradient id="blouse-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e8449" />
+      <stop offset="100%" stop-color="#196f3d" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3" />
+    </filter>
+    <pattern id="gold-thread" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#d4af37" />
+      <path d="M0,2 L4,2 M2,0 L2,4" stroke="#e5c158" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Background rectangle -->
+  <rect width="600" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Product title -->
+  <text x="300" y="40" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">Mango Motif</text>
+  <text x="300" y="70" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#666" text-anchor="middle">Traditional mango pattern maggam work</text>
+  
+  <!-- Blouse design - Mango Motif with traditional maggam work -->
+  <g transform="translate(300, 300)">
+    <!-- Main blouse shape -->
+    <path d="M-150,-100 C-140,-140 -70,-150 0,-150 C70,-150 140,-140 150,-100 L170,100 C170,140 140,170 100,180 L0,200 L-100,180 C-140,170 -170,140 -170,100 Z" 
+          fill="url(#blouse-gradient)" stroke="#333" stroke-width="2" filter="url(#shadow)" />
+    
+    <!-- Mango motif maggam embroidery -->
+    <g>
+      <!-- Central mango pattern -->
+      <g transform="translate(0, 0)">
+        <!-- Main central mango -->
+        <path d="M0,-60 C20,-60 40,-40 40,-10 C40,30 20,60 0,70 C-20,60 -40,30 -40,-10 C-40,-40 -20,-60 0,-60 Z" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+        
+        <!-- Inner details of mango -->
+        <path d="M0,-40 C10,-40 20,-30 20,-10 C20,15 10,35 0,40 C-10,35 -20,15 -20,-10 C-20,-30 -10,-40 0,-40 Z" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        
+        <!-- Center detail -->
+        <path d="M0,-20 C5,-20 10,-15 10,-5 C10,5 5,15 0,20 C-5,15 -10,5 -10,-5 C-10,-15 -5,-20 0,-20 Z" 
+              fill="url(#gold-thread)" />
+        
+        <!-- Stem at top -->
+        <path d="M0,-60 C-5,-65 -5,-70 0,-75 C5,-70 5,-65 0,-60" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        
+        <!-- Decorative curls -->
+        <path d="M0,70 C-10,75 -15,85 -10,90" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        <path d="M0,70 C10,75 15,85 10,90" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+      </g>
+      
+      <!-- Surrounding smaller mangoes -->
+      <g>
+        <!-- Top left mango -->
+        <g transform="translate(-80, -80) rotate(-30) scale(0.6)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <path d="M0,-10 C3,-10 5,-5 5,0 C5,5 3,10 0,12 C-3,10 -5,5 -5,0 C-5,-5 -3,-10 0,-10 Z" 
+                fill="url(#gold-thread)" />
+          <path d="M0,-40 C-3,-45 -3,-50 0,-52 C3,-50 3,-45 0,-40" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <!-- Top right mango -->
+        <g transform="translate(80, -80) rotate(30) scale(0.6)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <path d="M0,-10 C3,-10 5,-5 5,0 C5,5 3,10 0,12 C-3,10 -5,5 -5,0 C-5,-5 -3,-10 0,-10 Z" 
+                fill="url(#gold-thread)" />
+          <path d="M0,-40 C-3,-45 -3,-50 0,-52 C3,-50 3,-45 0,-40" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <!-- Bottom left mango -->
+        <g transform="translate(-80, 80) rotate(-150) scale(0.6)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <path d="M0,-10 C3,-10 5,-5 5,0 C5,5 3,10 0,12 C-3,10 -5,5 -5,0 C-5,-5 -3,-10 0,-10 Z" 
+                fill="url(#gold-thread)" />
+          <path d="M0,-40 C-3,-45 -3,-50 0,-52 C3,-50 3,-45 0,-40" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <!-- Bottom right mango -->
+        <g transform="translate(80, 80) rotate(150) scale(0.6)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <path d="M0,-10 C3,-10 5,-5 5,0 C5,5 3,10 0,12 C-3,10 -5,5 -5,0 C-5,-5 -3,-10 0,-10 Z" 
+                fill="url(#gold-thread)" />
+          <path d="M0,-40 C-3,-45 -3,-50 0,-52 C3,-50 3,-45 0,-40" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+      </g>
+      
+      <!-- Connecting vines -->
+      <g stroke="url(#gold-thread)" stroke-width="2" fill="none">
+        <path d="M0,-60 C-20,-70 -50,-75 -80,-80" />
+        <path d="M-50,-75 C-55,-65 -60,-60 -65,-55" />
+        
+        <path d="M0,-60 C20,-70 50,-75 80,-80" />
+        <path d="M50,-75 C55,-65 60,-60 65,-55" />
+        
+        <path d="M0,70 C-20,75 -50,80 -80,80" />
+        <path d="M-50,80 C-55,70 -60,65 -65,60" />
+        
+        <path d="M0,70 C20,75 50,80 80,80" />
+        <path d="M50,80 C55,70 60,65 65,60" />
+      </g>
+      
+      <!-- Border patterns -->
+      <g stroke="url(#gold-thread)" stroke-width="2" fill="none">
+        <!-- Neckline border with small mangoes -->
+        <path d="M-60,-130 C-40,-150 40,-150 60,-130" />
+        
+        <!-- Small mangoes along neckline -->
+        <g transform="translate(-40, -140) rotate(-30) scale(0.3)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <g transform="translate(0, -145) scale(0.3)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <g transform="translate(40, -140) rotate(30) scale(0.3)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <!-- Bottom border with mango pattern -->
+        <path d="M-80,120 C-40,140 40,140 80,120" />
+        
+        <!-- Small mangoes along bottom -->
+        <g transform="translate(-60, 130) rotate(180) scale(0.3)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <g transform="translate(0, 135) rotate(180) scale(0.3)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <g transform="translate(60, 130) rotate(180) scale(0.3)">
+          <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+          <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        </g>
+        
+        <!-- Side borders with small mangoes -->
+        <g>
+          <!-- Left side mangoes -->
+          <g transform="translate(-160, -50) rotate(-90) scale(0.3)">
+            <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+            <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          </g>
+          
+          <g transform="translate(-160, 0) rotate(-90) scale(0.3)">
+            <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+            <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          </g>
+          
+          <g transform="translate(-160, 50) rotate(-90) scale(0.3)">
+            <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+            <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          </g>
+          
+          <!-- Right side mangoes -->
+          <g transform="translate(160, -50) rotate(90) scale(0.3)">
+            <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+            <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          </g>
+          
+          <g transform="translate(160, 0) rotate(90) scale(0.3)">
+            <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+            <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          </g>
+          
+          <g transform="translate(160, 50) rotate(90) scale(0.3)">
+            <path d="M0,-40 C15,-40 30,-25 30,0 C30,25 15,40 0,50 C-15,40 -30,25 -30,0 C-30,-25 -15,-40 0,-40 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+            <path d="M0,-25 C8,-25 15,-15 15,0 C15,15 8,25 0,30 C-8,25 -15,15 -15,0 C-15,-15 -8,-25 0,-25 Z" 
+                  fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          </g>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Sleeve outlines -->
+    <path d="M-150,-100 C-160,-50 -170,0 -170,100" stroke="#333" stroke-width="2" fill="none" />
+    <path d="M150,-100 C160,-50 170,0 170,100" stroke="#333" stroke-width="2" fill="none" />
+  </g>
+  
+  <!-- Traditional label -->
+  <g transform="translate(300, 520)">
+    <rect x="-100" y="-20" width="200" height="40" rx="5" ry="5" fill="#1e8449" />
+    <text x="0" y="5" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">TRADITIONAL</text>
+  </g>
+</svg>

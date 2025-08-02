@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f3e9" />
+      <stop offset="100%" stop-color="#e6d7c3" />
+    </linearGradient>
+    <pattern id="pattern-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#d4c5a8" opacity="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="800" fill="url(#bg-gradient)" />
+  
+  <!-- Pattern overlay -->
+  <rect width="800" height="800" fill="url(#pattern-dots)" opacity="0.6" />
+  
+  <!-- Floral Cotton Blouse illustration -->
+  <g transform="translate(400, 400)">
+    <!-- Blouse outline -->
+    <path d="M-200,-250 C-180,-270 -150,-280 -120,-280 L120,-280 C150,-280 180,-270 200,-250 L200,150 C180,170 150,180 120,180 L-120,180 C-150,180 -180,170 -200,150 Z" fill="#fff" stroke="#d4c5a8" stroke-width="4" />
+    
+    <!-- Neckline -->
+    <path d="M-70,-280 C-40,-330 40,-330 70,-280" fill="none" stroke="#d4c5a8" stroke-width="4" />
+    
+    <!-- Sleeve left -->
+    <path d="M-200,-200 C-240,-170 -270,-120 -290,-60" fill="none" stroke="#d4c5a8" stroke-width="4" />
+    
+    <!-- Sleeve right -->
+    <path d="M200,-200 C240,-170 270,-120 290,-60" fill="none" stroke="#d4c5a8" stroke-width="4" />
+    
+    <!-- Floral embroidery pattern -->
+    <g fill="none" stroke="#c1a878" stroke-width="2">
+      <!-- Center floral pattern -->
+      <g transform="translate(0, -100)">
+        <!-- Main flower -->
+        <circle cx="0" cy="0" r="30" stroke="#a89377" fill="none" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="20" stroke="#a89377" fill="none" stroke-width="1.5" />
+        <circle cx="0" cy="0" r="10" stroke="#a89377" fill="none" stroke-width="1.5" />
+        
+        <!-- Petals -->
+        <path d="M0,-30 C10,-50 -10,-50 0,-70" stroke="#a89377" stroke-width="1.5" />
+        <path d="M30,0 C50,-10 50,10 70,0" stroke="#a89377" stroke-width="1.5" />
+        <path d="M0,30 C10,50 -10,50 0,70" stroke="#a89377" stroke-width="1.5" />
+        <path d="M-30,0 C-50,-10 -50,10 -70,0" stroke="#a89377" stroke-width="1.5" />
+        
+        <!-- Diagonal petals -->
+        <path d="M20,-20 C35,-35 25,-45 40,-60" stroke="#a89377" stroke-width="1.5" />
+        <path d="M20,20 C35,35 25,45 40,60" stroke="#a89377" stroke-width="1.5" />
+        <path d="M-20,20 C-35,35 -25,45 -40,60" stroke="#a89377" stroke-width="1.5" />
+        <path d="M-20,-20 C-35,-35 -25,-45 -40,-60" stroke="#a89377" stroke-width="1.5" />
+      </g>
+      
+      <!-- Left side small flowers -->
+      <g transform="translate(-120, -180)">
+        <circle cx="0" cy="0" r="15" />
+        <path d="M0,-15 C5,-25 -5,-25 0,-35" />
+        <path d="M15,0 C25,5 25,-5 35,0" />
+        <path d="M0,15 C5,25 -5,25 0,35" />
+        <path d="M-15,0 C-25,5 -25,-5 -35,0" />
+      </g>
+      
+      <!-- Right side small flowers -->
+      <g transform="translate(120, -180)">
+        <circle cx="0" cy="0" r="15" />
+        <path d="M0,-15 C5,-25 -5,-25 0,-35" />
+        <path d="M15,0 C25,5 25,-5 35,0" />
+        <path d="M0,15 C5,25 -5,25 0,35" />
+        <path d="M-15,0 C-25,5 -25,-5 -35,0" />
+      </g>
+      
+      <!-- Bottom pattern -->
+      <g transform="translate(0, 100)">
+        <path d="M-100,0 C-80,-20 -60,20 -40,0 C-20,-20 0,20 20,0 C40,-20 60,20 80,0 C100,-20 120,20 140,0" />
+        <path d="M-100,30 C-80,10 -60,50 -40,30 C-20,10 0,50 20,30 C40,10 60,50 80,30 C100,10 120,50 140,30" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Product label -->
+  <g transform="translate(400, 650)">
+    <rect x="-150" y="-40" width="300" height="80" rx="10" ry="10" fill="#fff" stroke="#d4c5a8" stroke-width="2" />
+    
+    <!-- Product name -->
+    <text x="0" y="-10" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8a7e6b" text-anchor="middle">Floral Cotton</text>
+    
+    <!-- Product description -->
+    <text x="0" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#8a7e6b" text-anchor="middle">Breathable cotton with delicate floral embroidery</text>
+  </g>
+</svg>

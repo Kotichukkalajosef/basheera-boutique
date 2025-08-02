@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Blouses Collection | Elegant Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles specific to category pages */
+        .category-banner {
+            height: 40vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/new-designer-banner.svg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .category-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-description {
+            padding: 60px 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .category-description p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 5% 80px;
+        }
+        
+        /* Laptop view - 3 column grid */
+        @media (min-width: 992px) and (max-width: 1400px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #d4af37;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(20px);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Designer specific styles */
+        .featured-designer {
+            background-color: #f9f9f9;
+            padding: 60px 5%;
+            margin: 40px 0;
+        }
+        
+        .designer-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+        .designer-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .designer-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .designer-info p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .designer-signature {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .designer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/elegant-logo.svg" alt="Elegant Designs Logo">
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="all-collections.html">All Collections</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-logo">
+                    <img src="images/elegant-logo.svg" alt="Elegant Designs Logo" />
+                    <h3>Elegant Designs</h3>
+                </div>
+            </div>
+            
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="index.html#categories"><i class="fas fa-th-large"></i>Categories</a></li>
+                <li><a href="all-collections.html"><i class="fas fa-shopping-bag"></i>All Collections</a></li>
+                <li><a href="index.html#featured"><i class="fas fa-star"></i>Featured</a></li>
+                <li><a href="index.html#about"><i class="fas fa-info-circle"></i>About Us</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+            
+            <div class="mobile-nav-footer">
+                <div class="mobile-nav-contact">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +91 7675971677</p>
+                    <p><i class="fas fa-envelope"></i> info@elegantdesigns.com</p>
+                </div>
+                <div class="mobile-nav-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay"></div>
+    </header>
+
+    <section class="category-banner">
+        <div>
+            <h1>Designer Blouses Collection</h1>
+            <p>Exclusive couture creations that blend traditional craftsmanship with contemporary design</p>
+        </div>
+    </section>
+
+    <section class="category-description">
+        <h2 class="section-title">Couture Creations</h2>
+        <p>Our designer blouse collection represents the pinnacle of craftsmanship and creativity. These exclusive pieces are created by our master designers who push the boundaries of traditional techniques to create contemporary masterpieces.</p>
+        <p>Each design in this collection is unique, featuring innovative patterns, premium materials, and exquisite detailing that sets them apart. These blouses are perfect for those special occasions where you want to make a statement with your style.</p>
+    </section>
+    
+    <section class="featured-designer">
+        <div class="designer-container">
+            <div class="designer-info">
+                <h3>Meet Our Lead Designer</h3>
+                <p>With over 15 years of experience in traditional and contemporary Indian fashion, our lead designer brings a unique perspective to each creation. Trained in both traditional handcrafting techniques and modern design principles, she creates pieces that honor heritage while embracing innovation.</p>
+                <p>"My inspiration comes from the rich tapestry of Indian art forms, architecture, and nature. I believe in creating pieces that not only look beautiful but also tell a story and make the wearer feel special."</p>
+                <div class="designer-signature">- Priya Sharma</div>
+            </div>
+            <div class="designer-image">
+                <img src="images/designer-profile.svg" alt="Lead Designer">
+            </div>
+        </div>
+    </section>
+
+    <section class="category-description">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Designs</button>
+            <button class="filter-btn" data-filter="contemporary">Contemporary</button>
+            <button class="filter-btn" data-filter="fusion">Fusion</button>
+            <button class="filter-btn" data-filter="luxury">Luxury</button>
+            <button class="filter-btn" data-filter="exclusive">Exclusive</button>
+        </div>
+    </section>
+
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="design-card" data-category="contemporary fusion">
+            <div class="design-image">
+                <img src="images/designer-1.svg" alt="Contemporary Designer Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Avant-Garde</h3>
+                <p>Contemporary design with asymmetric patterns</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Avant-Garde%20Designer%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="design-card" data-category="luxury exclusive">
+            <div class="design-image">
+                <img src="images/designer-2.svg" alt="Luxury Designer Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Royal Opulence</h3>
+                <p>Luxury design with premium embellishments</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Royal%20Opulence%20Designer%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="design-card" data-category="fusion">
+            <div class="design-image">
+                <img src="images/designer-3.svg" alt="Fusion Designer Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>East Meets West</h3>
+                <p>Fusion of traditional and western elements</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20East%20Meets%20West%20Designer%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="design-card" data-category="contemporary exclusive">
+            <div class="design-image">
+                <img src="images/designer-4.svg" alt="Contemporary Exclusive Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Modern Masterpiece</h3>
+                <p>Contemporary design with unique textures</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Modern%20Masterpiece%20Designer%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="design-card" data-category="luxury fusion">
+            <div class="design-image">
+                <img src="images/designer-5.svg" alt="Luxury Fusion Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Gilded Fusion</h3>
+                <p>Luxury fusion with gold leaf accents</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Gilded%20Fusion%20Designer%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="design-card" data-category="exclusive contemporary">
+            <div class="design-image">
+                <img src="images/designer-6.svg" alt="Exclusive Contemporary Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Artistic Vision</h3>
+                <p>Exclusive design inspired by modern art</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Artistic%20Vision%20Designer%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Elegant Designs</h2>
+                <p>Exquisite Blouses & Maggam Work</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="all-collections.html">All Collections</a></li>
+                    <li><a href="index.html#featured">Featured</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest designs and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Elegant Designs. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const designCards = document.querySelectorAll('.design-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    designCards.forEach(card => {
+                        if(filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            
+                            if(categories.includes(filterValue)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Back to top button functionality
+            const backToTopBtn = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if(window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="bottom-nav.js"></script>
+</body>
+</html>

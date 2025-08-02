@@ -1,0 +1,92 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f5f5" />
+      <stop offset="100%" stop-color="#e0e0e0" />
+    </linearGradient>
+    <linearGradient id="fabric-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6a1b4a" />
+      <stop offset="100%" stop-color="#4a1235" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rectangle -->
+  <rect width="600" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Designer silhouette -->
+  <g transform="translate(300, 280)">
+    <!-- Head and face -->
+    <circle cx="0" cy="-120" r="80" fill="#e8c4b0" />
+    <path d="M-40,-120 C-30,-110 -10,-110 0,-120 C10,-110 30,-110 40,-120" fill="none" stroke="#333" stroke-width="2" />
+    <ellipse cx="-25" cy="-140" rx="5" ry="8" fill="#333" />
+    <ellipse cx="25" cy="-140" rx="5" ry="8" fill="#333" />
+    
+    <!-- Hair -->
+    <path d="M-80,-160 C-70,-200 70,-200 80,-160 C90,-120 50,-80 0,-80 C-50,-80 -90,-120 -80,-160 Z" fill="#2a1a0a" />
+    <path d="M-40,-80 C-30,-70 30,-70 40,-80" fill="none" stroke="#2a1a0a" stroke-width="10" />
+    
+    <!-- Body outline -->
+    <path d="M0,-80 L-15,-40 L-50,0 L-60,100 L-100,200 L-30,200 L0,120 L30,200 L100,200 L60,100 L50,0 L15,-40 Z" fill="#e8c4b0" />
+    
+    <!-- Designer outfit -->
+    <path d="M-15,-40 L-50,0 L-60,100 L-100,200 L-30,200 L0,120 L30,200 L100,200 L60,100 L50,0 L15,-40 Z" fill="url(#fabric-gradient)" opacity="0.9" />
+    
+    <!-- Embellishments on outfit -->
+    <g stroke="#d4af37" stroke-width="1.5" fill="none">
+      <!-- Neckline design -->
+      <path d="M-15,-40 C-5,-50 5,-50 15,-40" stroke-width="2" />
+      
+      <!-- Decorative patterns -->
+      <g>
+        <!-- Left side patterns -->
+        <path d="M-40,0 C-35,-10 -25,-10 -20,0" />
+        <path d="M-45,20 C-40,10 -30,10 -25,20" />
+        <path d="M-50,40 C-45,30 -35,30 -30,40" />
+        <path d="M-55,60 C-50,50 -40,50 -35,60" />
+        
+        <!-- Right side patterns -->
+        <path d="M40,0 C35,-10 25,-10 20,0" />
+        <path d="M45,20 C40,10 30,10 25,20" />
+        <path d="M50,40 C45,30 35,30 30,40" />
+        <path d="M55,60 C50,50 40,50 35,60" />
+        
+        <!-- Center patterns -->
+        <path d="M-10,30 C-5,20 5,20 10,30" />
+        <path d="M-15,50 C-10,40 10,40 15,50" />
+        <path d="M-20,70 C-15,60 15,60 20,70" />
+      </g>
+      
+      <!-- Decorative circles representing embroidery -->
+      <g fill="#d4af37">
+        <circle cx="-30" cy="10" r="2" />
+        <circle cx="30" cy="10" r="2" />
+        <circle cx="-35" cy="30" r="2" />
+        <circle cx="35" cy="30" r="2" />
+        <circle cx="-40" cy="50" r="2" />
+        <circle cx="40" cy="50" r="2" />
+        <circle cx="-45" cy="70" r="2" />
+        <circle cx="45" cy="70" r="2" />
+        <circle cx="0" cy="40" r="2" />
+        <circle cx="-10" cy="60" r="2" />
+        <circle cx="10" cy="60" r="2" />
+      </g>
+    </g>
+    
+    <!-- Designer hands holding fabric -->
+    <path d="M-60,100 C-70,120 -80,150 -100,200" fill="none" stroke="#e8c4b0" stroke-width="20" stroke-linecap="round" />
+    <path d="M60,100 C70,120 80,150 100,200" fill="none" stroke="#e8c4b0" stroke-width="20" stroke-linecap="round" />
+    
+    <!-- Fabric being worked on -->
+    <path d="M-90,180 C-60,150 60,150 90,180" fill="#f0d6c9" stroke="#d4af37" stroke-width="2" />
+    <path d="M-70,170 C-50,160 50,160 70,170" fill="none" stroke="#d4af37" stroke-width="1" />
+    <path d="M-50,165 C-30,155 30,155 50,165" fill="none" stroke="#d4af37" stroke-width="1" />
+  </g>
+  
+  <!-- Name tag -->
+  <g transform="translate(300, 500)">
+    <rect x="-100" y="-20" width="200" height="40" rx="10" ry="10" fill="#6a1b4a" />
+    <text x="0" y="5" font-family="'Segoe UI', Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" dominant-baseline="middle">Priya Sharma</text>
+    <text x="0" y="25" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" dominant-baseline="middle">Lead Designer</text>
+  </g>
+</svg>

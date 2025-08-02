@@ -1,0 +1,117 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f5f5" />
+      <stop offset="100%" stop-color="#e0e0e0" />
+    </linearGradient>
+    <linearGradient id="fabric-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7d3c98" />
+      <stop offset="100%" stop-color="#6c3483" />
+    </linearGradient>
+    <pattern id="gold-thread" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#d4af37" />
+      <path d="M0,2 L4,2 M2,0 L2,4" stroke="#e5c158" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Background rectangle -->
+  <rect width="600" height="400" fill="url(#bg-gradient)" />
+  
+  <!-- Craft scene illustration -->
+  <g>
+    <!-- Embroidery frame -->
+    <ellipse cx="300" cy="200" rx="250" ry="150" fill="none" stroke="#8b4513" stroke-width="15" />
+    <ellipse cx="300" cy="200" rx="230" ry="130" fill="none" stroke="#8b4513" stroke-width="5" />
+    
+    <!-- Fabric in frame -->
+    <ellipse cx="300" cy="200" rx="220" ry="120" fill="url(#fabric-gradient)" />
+    
+    <!-- Embroidery in progress -->
+    <g>
+      <!-- Peacock design outline -->
+      <path d="M300,150 C280,130 250,140 260,170 C270,200 330,200 340,170 C350,140 320,130 300,150 Z" 
+            fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="5,5" />
+      
+      <!-- Partially completed embroidery -->
+      <path d="M300,150 C290,140 275,145 270,160" stroke="url(#gold-thread)" stroke-width="4" fill="none" />
+      <path d="M300,150 C310,140 325,145 330,160" stroke="url(#gold-thread)" stroke-width="4" fill="none" />
+      
+      <!-- Feather patterns partially completed -->
+      <path d="M270,170 C260,190 270,210 280,220" stroke="url(#gold-thread)" stroke-width="3" fill="none" />
+      <path d="M330,170 C340,190 330,210 320,220" stroke="url(#gold-thread)" stroke-width="3" fill="none" />
+      
+      <!-- Decorative elements -->
+      <g fill="url(#gold-thread)">
+        <circle cx="300" cy="150" r="3" />
+        <circle cx="270" cy="170" r="3" />
+        <circle cx="330" cy="170" r="3" />
+        <circle cx="280" cy="220" r="3" />
+        <circle cx="320" cy="220" r="3" />
+      </g>
+    </g>
+    
+    <!-- Hands working on embroidery -->
+    <g>
+      <!-- Left hand -->
+      <path d="M150,250 C170,230 200,220 230,230 C240,235 245,240 250,250" 
+            fill="#e8c4b0" stroke="#d0a090" stroke-width="1" />
+      <path d="M230,230 C235,225 240,223 245,225" fill="#e8c4b0" stroke="#d0a090" stroke-width="1" /> <!-- Thumb -->
+      <path d="M250,250 C255,245 260,243 265,245" fill="#e8c4b0" stroke="#d0a090" stroke-width="1" /> <!-- Index finger -->
+      
+      <!-- Right hand -->
+      <path d="M450,250 C430,230 400,220 370,230 C360,235 355,240 350,250" 
+            fill="#e8c4b0" stroke="#d0a090" stroke-width="1" />
+      <path d="M370,230 C365,225 360,223 355,225" fill="#e8c4b0" stroke="#d0a090" stroke-width="1" /> <!-- Thumb -->
+      <path d="M350,250 C345,245 340,243 335,245" fill="#e8c4b0" stroke="#d0a090" stroke-width="1" /> <!-- Index finger -->
+    </g>
+    
+    <!-- Needle and thread -->
+    <g>
+      <!-- Thread -->
+      <path d="M250,250 C270,230 290,220 300,230 C310,240 330,250 350,250" 
+            stroke="url(#gold-thread)" stroke-width="2" fill="none" />
+      
+      <!-- Needle -->
+      <line x1="240" y1="260" x2="260" y2="240" stroke="#c0c0c0" stroke-width="1.5" />
+      <circle cx="260" cy="240" r="1" fill="#c0c0c0" />
+    </g>
+    
+    <!-- Additional embroidery tools -->
+    <g transform="translate(450, 300)">
+      <!-- Thread spools -->
+      <g transform="rotate(-15)">
+        <rect x="-20" y="-10" width="40" height="20" rx="5" ry="5" fill="#8b4513" />
+        <rect x="-15" y="-15" width="30" height="30" rx="2" ry="2" fill="url(#gold-thread)" />
+      </g>
+      
+      <!-- Scissors -->
+      <g transform="translate(-100, 20) rotate(30)">
+        <path d="M-20,-10 L20,10 M-20,10 L20,-10" stroke="#c0c0c0" stroke-width="2" />
+        <circle cx="-25" cy="0" r="8" fill="none" stroke="#c0c0c0" stroke-width="2" />
+        <circle cx="25" cy="0" r="8" fill="none" stroke="#c0c0c0" stroke-width="2" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Design patterns reference -->
+  <g transform="translate(100, 80)">
+    <!-- Pattern reference sheet -->
+    <rect x="-50" y="-40" width="100" height="80" fill="white" stroke="#999" stroke-width="1" />
+    
+    <!-- Pattern sketches -->
+    <g stroke="#333" stroke-width="0.5" fill="none">
+      <path d="M-40,-30 C-30,-35 -20,-30 -10,-35 C0,-40 10,-35 20,-30" />
+      <path d="M-40,-15 C-30,-20 -20,-15 -10,-20 C0,-25 10,-20 20,-15" />
+      <path d="M-40,0 C-30,-5 -20,0 -10,-5 C0,-10 10,-5 20,0" />
+      <path d="M-40,15 C-30,10 -20,15 -10,10 C0,5 10,10 20,15" />
+      <path d="M-40,30 C-30,25 -20,30 -10,25 C0,20 10,25 20,30" />
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <g text-anchor="middle">
+    <text x="300" y="40" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#333" font-weight="bold">The Craft of Maggam</text>
+    <text x="300" y="370" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#666">Traditional handcrafted embroidery technique</text>
+  </g>
+</svg>

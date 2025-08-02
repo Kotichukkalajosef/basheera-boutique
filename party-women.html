@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Party Wear Collection | Elegant Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles specific to category pages */
+        .category-banner {
+            height: 40vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/wedding-banner.svg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .category-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-description {
+            padding: 60px 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .category-description p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            padding: 0 5%;
+        }
+        
+        .filter-button {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-button:hover, .filter-button.active {
+            background-color: #d4af37;
+            color: white;
+            border-color: #d4af37;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 0 5%;
+            max-width: 1400px;
+            margin: 0 auto 80px;
+        }
+        
+        @media (max-width: 992px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/elegant-logo.svg" alt="Elegant Designs Logo">
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="all-collections.html" class="active">All Collections</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-logo">
+                    <img src="images/elegant-logo.svg" alt="Elegant Designs Logo">
+                    <h3>Elegant Designs</h3>
+                </div>
+            </div>
+            
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#categories"><i class="fas fa-th-large"></i> Categories</a></li>
+                <li><a href="all-collections.html" class="active"><i class="fas fa-shopping-bag"></i> All Collections</a></li>
+                <li><a href="index.html#featured"><i class="fas fa-star"></i> Featured</a></li>
+                <li><a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            
+            <div class="mobile-nav-footer">
+                <div class="mobile-nav-contact">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +91 7675971677</p>
+                    <p><i class="fas fa-envelope"></i> info@elegantdesigns.com</p>
+                </div>
+                <div class="mobile-nav-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay"></div>
+    </header>
+
+    <!-- Instagram-style Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="bottom-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="all-collections.html" class="bottom-nav-item active">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Collections</span>
+        </a>
+        <a href="index.html#categories" class="bottom-nav-item">
+            <i class="fas fa-th-large"></i>
+            <span>Categories</span>
+        </a>
+        <a href="index.html#contact" class="bottom-nav-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+    <div class="category-banner">
+        <div>
+            <h1>Party Wear Collection for Women</h1>
+            <p>Elegant and festive designs for special occasions and celebrations</p>
+        </div>
+    </div>
+
+    <div class="category-description">
+        <p>Our Party Wear collection features stunning designs perfect for celebrations and special occasions. Each piece is crafted with attention to detail, combining traditional elements with contemporary styles to create truly unique festive attire.</p>
+        <p>Browse our collection below and find the perfect party wear for your next celebration.</p>
+    </div>
+
+    <div class="filter-container">
+        <button class="filter-button active" data-filter="all">All Styles</button>
+        <button class="filter-button" data-filter="floral">Floral</button>
+        <button class="filter-button" data-filter="traditional">Traditional</button>
+        <button class="filter-button" data-filter="contemporary">Contemporary</button>
+    </div>
+
+    <div class="products-grid">
+        <!-- Products will be dynamically loaded here based on the category and filters -->
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Elegant Designs</h2>
+                <p>Exquisite Blouses & Maggam Work</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="all-collections.html">All Collections</a></li>
+                    <li><a href="index.html#featured">Featured</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest designs and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Elegant Designs. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Floating WhatsApp Chat Button -->
+    <div class="floating-whatsapp">
+        <div class="whatsapp-bubble">
+            <p>Hi there! 👋 Need help with our designs?</p>
+            <p>Chat with us on WhatsApp: <span class="phone-number">+91 7675971677</span></p>
+            <div class="bubble-actions">
+                <button class="bubble-action chat-now">Chat Now</button>
+                <button class="bubble-action close-bubble">Close</button>
+            </div>
+        </div>
+        <div class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="bottom-nav.js"></script>
+    <script>
+        // Initialize site configuration
+        const siteConfig = initializeSiteConfig();
+        
+        // Get products for this category and age group
+        const products = getProducts({
+            category: 'party',
+            ageGroup: 'women'
+        });
+        
+        // Function to render products
+        function renderProducts(productsToRender) {
+            const productsGrid = document.querySelector('.products-grid');
+            productsGrid.innerHTML = '';
+            
+            if (productsToRender.length === 0) {
+                productsGrid.innerHTML = '<p class="no-products">No products found matching the selected filters.</p>';
+                return;
+            }
+            
+            productsToRender.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'design-card';
+                productCard.setAttribute('data-style', product.style);
+                
+                productCard.innerHTML = `
+                    <div class="design-image">
+                        <img src="${product.image || siteConfig.siteImages.defaultProductImage}" alt="${product.name}">
+                        <div class="design-overlay">
+                            <a href="#" class="view-details" data-product-id="${product.id}">View Details</a>
+                        </div>
+                    </div>
+                    <div class="design-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="tag-button-container">
+                            <span class="category-tag">${siteConfig.categories[product.category].name}</span>
+                            <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20${encodeURIComponent(product.name)}" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                productsGrid.appendChild(productCard);
+            });
+            
+            // Add event listeners for view details buttons
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productId = this.getAttribute('data-product-id');
+                    const product = products.find(p => p.id === productId);
+                    if (product) {
+                        // Show product details modal (implementation would be in a separate function)
+                        console.log('Show details for product:', product);
+                    }
+                });
+            });
+        }
+        
+        // Initial render
+        renderProducts(products);
+        
+        // Filter functionality
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active state
+                document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                let filteredProducts;
+                
+                if (filter === 'all') {
+                    filteredProducts = products;
+                } else {
+                    filteredProducts = products.filter(product => product.style === filter);
+                }
+                
+                renderProducts(filteredProducts);
+            });
+        });
+        
+        // Mobile menu functionality
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.mobile-nav').classList.toggle('active');
+            document.querySelector('.mobile-menu-overlay').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+        document.querySelector('.mobile-menu-overlay').addEventListener('click', function() {
+            document.querySelector('.mobile-nav').classList.remove('active');
+            document.querySelector('.mobile-menu-overlay').classList.remove('active');
+            document.querySelector('.mobile-menu-btn').classList.remove('active');
+        });
+        
+        // Back to top functionality
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // WhatsApp floating button functionality
+        const whatsappIcon = document.querySelector('.whatsapp-icon');
+        const whatsappBubble = document.querySelector('.whatsapp-bubble');
+        const closeBubble = document.querySelector('.close-bubble');
+        const chatNow = document.querySelector('.chat-now');
+        
+        whatsappIcon.addEventListener('click', function() {
+            whatsappBubble.classList.toggle('show');
+        });
+        
+        closeBubble.addEventListener('click', function() {
+            whatsappBubble.classList.remove('show');
+        });
+        
+        chatNow.addEventListener('click', function() {
+            window.open('https://wa.me/917675971677', '_blank');
+        });
+    </script>
+</body>
+</html>

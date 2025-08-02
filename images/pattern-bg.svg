@@ -1,0 +1,51 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="transparent" />
+  
+  <!-- Decorative pattern elements -->
+  <g fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15">
+    <!-- Grid pattern -->
+    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+    <rect width="400" height="400" fill="url(#smallGrid)" />
+    
+    <!-- Elegant floral elements -->
+    <g transform="translate(50, 50)" opacity="0.4">
+      <circle cx="0" cy="0" r="15" />
+      <circle cx="0" cy="0" r="10" />
+      <circle cx="0" cy="0" r="5" />
+      <path d="M 0,-20 C 10,-15 20,-10 15,0 C 20,10 15,20 0,15 C -15,20 -20,10 -15,0 C -20,-10 -10,-15 0,-20" />
+    </g>
+    
+    <g transform="translate(150, 150)" opacity="0.4">
+      <circle cx="0" cy="0" r="15" />
+      <circle cx="0" cy="0" r="10" />
+      <circle cx="0" cy="0" r="5" />
+      <path d="M 0,-20 C 10,-15 20,-10 15,0 C 20,10 15,20 0,15 C -15,20 -20,10 -15,0 C -20,-10 -10,-15 0,-20" />
+    </g>
+    
+    <g transform="translate(250, 250)" opacity="0.4">
+      <circle cx="0" cy="0" r="15" />
+      <circle cx="0" cy="0" r="10" />
+      <circle cx="0" cy="0" r="5" />
+      <path d="M 0,-20 C 10,-15 20,-10 15,0 C 20,10 15,20 0,15 C -15,20 -20,10 -15,0 C -20,-10 -10,-15 0,-20" />
+    </g>
+    
+    <g transform="translate(350, 50)" opacity="0.4">
+      <circle cx="0" cy="0" r="15" />
+      <circle cx="0" cy="0" r="10" />
+      <circle cx="0" cy="0" r="5" />
+      <path d="M 0,-20 C 10,-15 20,-10 15,0 C 20,10 15,20 0,15 C -15,20 -20,10 -15,0 C -20,-10 -10,-15 0,-20" />
+    </g>
+    
+    <!-- Connecting lines -->
+    <line x1="50" y1="50" x2="150" y2="150" />
+    <line x1="150" y1="150" x2="250" y2="250" />
+    <line x1="250" y1="250" x2="350" y2="50" />
+    <line x1="350" y1="50" x2="50" y2="50" />
+    
+    <!-- Decorative border -->
+    <rect x="10" y="10" width="380" height="380" rx="5" ry="5" />
+  </g>
+</svg>

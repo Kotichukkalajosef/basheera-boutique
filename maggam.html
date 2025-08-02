@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggam Work Collection | Elegant Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles specific to category pages */
+        .category-banner {
+            height: 40vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/new-maggam-banner.svg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .category-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .category-description {
+            padding: 60px 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .category-description p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 5% 80px;
+        }
+        
+        /* Laptop view - 3 column grid */
+        @media (min-width: 992px) and (max-width: 1400px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #d4af37;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(20px);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Maggam work specific styles */
+        .craft-info {
+            background-color: #f9f9f9;
+            padding: 60px 5%;
+            margin: 40px 0;
+        }
+        
+        .craft-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        
+        .craft-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .craft-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .craft-text p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .craft-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/elegant-logo.svg" alt="Elegant Designs Logo">
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="all-collections.html">All Collections</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-logo">
+                    <img src="images/elegant-logo.svg" alt="Elegant Designs Logo" />
+                    <h3>Elegant Designs</h3>
+                </div>
+            </div>
+            
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="index.html#categories"><i class="fas fa-th-large"></i>Categories</a></li>
+                <li><a href="all-collections.html"><i class="fas fa-shopping-bag"></i>All Collections</a></li>
+                <li><a href="index.html#featured"><i class="fas fa-star"></i>Featured</a></li>
+                <li><a href="index.html#about"><i class="fas fa-info-circle"></i>About Us</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+            
+            <div class="mobile-nav-footer">
+                <div class="mobile-nav-contact">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +91 7675971677</p>
+                    <p><i class="fas fa-envelope"></i> info@elegantdesigns.com</p>
+                </div>
+                <div class="mobile-nav-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay"></div>
+    </header>
+
+    <section class="category-banner">
+        <div>
+            <h1>Maggam Work Collection</h1>
+            <p>Traditional and contemporary embroidery showcasing exquisite craftsmanship and artistry</p>
+        </div>
+    </section>
+
+    <section class="category-description">
+        <h2 class="section-title">The Art of Maggam</h2>
+        <p>Maggam work is a traditional form of embroidery that originated in South India. It involves intricate threadwork, often using gold and silver threads, along with embellishments like beads, stones, and sequins to create elaborate designs on fabric.</p>
+        <p>Our collection showcases the finest maggam work created by skilled artisans who have mastered this traditional craft. Each piece is a testament to the rich cultural heritage and the meticulous attention to detail that goes into creating these works of art.</p>
+    </section>
+    
+    <section class="craft-info">
+        <div class="craft-container">
+            <div class="craft-image">
+                <img src="images/maggam-craft.svg" alt="Maggam Work Process">
+            </div>
+            <div class="craft-text">
+                <h3>The Craft of Maggam</h3>
+                <p>Maggam work involves a meticulous process where designs are first drawn on paper and then transferred to fabric. The fabric is stretched on a frame, and skilled artisans use special needles to create the embroidery with various types of threads.</p>
+                <p>Traditional motifs include peacocks, flowers, mangoes, and geometric patterns. The work requires precision, patience, and years of practice to master. Each piece takes several days to complete, depending on the complexity of the design.</p>
+                <p>At Elegant Designs, we work with artisans who have been practicing this craft for generations, ensuring that each piece maintains the authenticity and quality of traditional maggam work while incorporating contemporary design elements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-description">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Designs</button>
+            <button class="filter-btn" data-filter="traditional">Traditional</button>
+            <button class="filter-btn" data-filter="contemporary">Contemporary</button>
+            <button class="filter-btn" data-filter="floral">Floral</button>
+            <button class="filter-btn" data-filter="geometric">Geometric</button>
+        </div>
+    </section>
+
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="design-card" data-category="traditional floral">
+            <div class="design-image">
+                <img src="images/maggam-1.svg" alt="Traditional Maggam Work">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Peacock Glory</h3>
+                <p>Traditional peacock motif with gold thread</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Peacock%20Glory%20Maggam%20Work" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="design-card" data-category="contemporary geometric">
+            <div class="design-image">
+                <img src="images/maggam-2.svg" alt="Contemporary Maggam Work">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Modern Geometry</h3>
+                <p>Contemporary geometric patterns with silver thread</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Modern%20Geometry%20Maggam%20Work" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="design-card" data-category="traditional floral">
+            <div class="design-image">
+                <img src="images/maggam-3.svg" alt="Floral Maggam Work">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Lotus Bloom</h3>
+                <p>Traditional lotus pattern with gold and red threads</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Lotus%20Bloom%20Maggam%20Work" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="design-card" data-category="contemporary floral">
+            <div class="design-image">
+                <img src="images/maggam-4.svg" alt="Contemporary Floral Maggam">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Modern Blooms</h3>
+                <p>Contemporary floral design with pastel threads</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Modern%20Blooms%20Maggam%20Work" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="design-card" data-category="traditional geometric">
+            <div class="design-image">
+                <img src="images/maggam-5.svg" alt="Geometric Maggam Work">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Temple Inspired</h3>
+                <p>Traditional temple border patterns</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Temple%20Inspired%20Maggam%20Work" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="design-card" data-category="contemporary geometric">
+            <div class="design-image">
+                <img src="images/maggam-6.svg" alt="Contemporary Geometric Maggam">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Abstract Fusion</h3>
+                <p>Contemporary abstract design with mixed threads</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Abstract%20Fusion%20Maggam%20Work" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Elegant Designs</h2>
+                <p>Exquisite Blouses & Maggam Work</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="all-collections.html">All Collections</a></li>
+                    <li><a href="index.html#featured">Featured</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest designs and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Elegant Designs. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const designCards = document.querySelectorAll('.design-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    designCards.forEach(card => {
+                        if(filterValue === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            
+                            if(categories.includes(filterValue)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Back to top button functionality
+            const backToTopBtn = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if(window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="bottom-nav.js"></script>
+</body>
+</html>

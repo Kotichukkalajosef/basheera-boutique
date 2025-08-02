@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casual Blouses Collection | Elegant Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Premium Category Page Styles */
+        .category-banner {
+            height: 50vh;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(139, 38, 53, 0.8)), url('images/new-casual-banner.svg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .category-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .category-banner p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            opacity: 0.95;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .category-description {
+            padding: 80px 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-white);
+        }
+        
+        .category-description p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+            padding: 0 5%;
+        }
+        
+        .filter-btn {
+            background: var(--bg-light);
+            border: 2px solid transparent;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-dark);
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--primary-gold);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 40px;
+            padding: 0 5% 100px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* Enhanced Product Cards */
+        .product-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-large);
+        }
+        
+        .product-image {
+            position: relative;
+            overflow: hidden;
+            height: 350px;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .view-product {
+            color: white;
+            background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+            padding: 16px 32px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transform: translateY(20px);
+            transition: var(--transition);
+            box-shadow: var(--shadow-medium);
+            text-decoration: none;
+        }
+        
+        .product-card:hover .view-product {
+            transform: translateY(0);
+        }
+        
+        .view-product:hover {
+            background: linear-gradient(135deg, var(--primary-gold-dark), var(--primary-gold));
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        .product-info p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .order-btn {
+            background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+            flex: 1;
+            text-align: center;
+        }
+        
+        .order-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            background: linear-gradient(135deg, var(--primary-gold-dark), var(--primary-gold));
+        }
+        
+        .whatsapp-order-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 12px 20px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .whatsapp-order-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            background: linear-gradient(135deg, #128C7E, #25D366);
+        }
+        
+        /* Laptop view - 3 column grid */
+        @media (min-width: 992px) and (max-width: 1400px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+        
+        /* Enhanced Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--primary-gold-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-medium);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+            background: linear-gradient(135deg, var(--primary-gold-dark), var(--primary-gold));
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .category-banner {
+                height: 40vh;
+            }
+            
+            .category-banner h1 {
+                font-size: 2.2rem;
+            }
+            
+            .category-banner p {
+                font-size: 1.1rem;
+            }
+            
+            .category-description {
+                padding: 60px 5%;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 30px;
+                padding: 0 5% 80px;
+            }
+            
+            .product-image {
+                height: 300px;
+            }
+            
+            .filter-container {
+                gap: 12px;
+                margin-bottom: 40px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .category-banner {
+                height: 35vh;
+            }
+            
+            .category-banner h1 {
+                font-size: 1.8rem;
+            }
+            
+            .category-banner p {
+                font-size: 1rem;
+            }
+            
+            .category-description {
+                padding: 50px 5%;
+            }
+            
+            .category-description p {
+                font-size: 1rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 0 5% 70px;
+            }
+            
+            .product-image {
+                height: 280px;
+            }
+            
+            .product-info {
+                padding: 20px;
+            }
+            
+            .product-actions {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .order-btn, .whatsapp-order-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .back-to-top {
+                width: 50px;
+                height: 50px;
+                font-size: 1.1rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/elegant-logo.svg" alt="Elegant Designs Logo">
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="all-collections.html">All Collections</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-logo">
+                    <img src="images/elegant-logo.svg" alt="Elegant Designs Logo" />
+                    <h3>Elegant Designs</h3>
+                </div>
+            </div>
+            
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="index.html#categories"><i class="fas fa-th-large"></i>Categories</a></li>
+                <li><a href="all-collections.html"><i class="fas fa-shopping-bag"></i>All Collections</a></li>
+                <li><a href="index.html#featured"><i class="fas fa-star"></i>Featured</a></li>
+                <li><a href="index.html#about"><i class="fas fa-info-circle"></i>About Us</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+            
+            <div class="mobile-nav-footer">
+                <div class="mobile-nav-contact">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +91 7675971677</p>
+                    <p><i class="fas fa-envelope"></i> info@elegantdesigns.com</p>
+                </div>
+                <div class="mobile-nav-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay"></div>
+    </header>
+
+    <section class="category-banner">
+        <div>
+            <h1>Casual Blouses Collection</h1>
+            <p>Comfortable and stylish everyday blouses with elegant touches of maggam work</p>
+        </div>
+    </section>
+
+    <section class="category-description">
+        <h2 class="section-title">Everyday Elegance</h2>
+        <p>Our casual blouse collection combines comfort with style, perfect for everyday wear. These designs feature lighter embroidery and simpler patterns that add a touch of elegance to your daily outfits without being overly ornate.</p>
+        <p>Made with breathable fabrics like cotton, linen, and light silk, these blouses are designed for comfort while maintaining a sophisticated look. Each piece features thoughtful details and subtle maggam work that elevates your everyday style.</p>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Designs</button>
+            <button class="filter-btn" data-filter="cotton">Cotton</button>
+            <button class="filter-btn" data-filter="linen">Linen</button>
+            <button class="filter-btn" data-filter="silk">Light Silk</button>
+            <button class="filter-btn" data-filter="floral">Floral</button>
+        </div>
+    </section>
+
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="cotton floral">
+            <div class="product-image">
+                <img src="images/casual-1.svg" alt="Cotton Casual Blouse">
+                <div class="product-overlay">
+                    <a href="#" class="view-product">View Details</a>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Floral Cotton</h3>
+                <p>Breathable cotton with delicate floral embroidery</p>
+                <div class="product-price">₹1,200</div>
+                <div class="product-actions">
+                    <a href="#" class="order-btn">Order Now</a>
+                    <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Floral%20Cotton%20Blouse" class="whatsapp-order-btn">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-category="linen">
+            <div class="product-image">
+                <img src="images/casual-2.svg" alt="Linen Casual Blouse">
+                <div class="product-overlay">
+                    <a href="#" class="view-product">View Details</a>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Simple Elegance</h3>
+                <p>Light linen with minimal thread work</p>
+                <div class="product-price">₹1,500</div>
+                <div class="product-actions">
+                    <a href="#" class="order-btn">Order Now</a>
+                    <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Simple%20Elegance%20Linen%20Blouse" class="whatsapp-order-btn">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="design-card" data-category="silk floral">
+            <div class="design-image">
+                <img src="images/casual-3.svg" alt="Light Silk Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Pastel Bloom</h3>
+                <p>Light silk with pastel floral patterns</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Pastel%20Bloom%20Silk%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="design-card" data-category="cotton">
+            <div class="design-image">
+                <img src="images/casual-4.svg" alt="Embroidered Cotton Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Contemporary Cotton</h3>
+                <p>Soft cotton with contemporary design elements</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Contemporary%20Cotton%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="design-card" data-category="silk">
+            <div class="design-image">
+                <img src="images/casual-5.svg" alt="Casual Silk Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Subtle Shine</h3>
+                <p>Light silk with subtle thread work</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Subtle%20Shine%20Silk%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="design-card" data-category="linen floral">
+            <div class="design-image">
+                <img src="images/casual-6.svg" alt="Floral Linen Blouse">
+                <div class="design-overlay">
+                    <a href="#" class="view-details">View Details</a>
+                </div>
+            </div>
+            <div class="design-info">
+                <h3>Natural Bloom</h3>
+                <p>Breathable linen with floral embroidery</p>
+                <a href="https://wa.me/917675971677?text=I'm%20interested%20in%20the%20Natural%20Bloom%20Linen%20Blouse" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Elegant Designs</h2>
+                <p>Exquisite Blouses & Maggam Work</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="all-collections.html">All Collections</a></li>
+                    <li><a href="index.html#featured">Featured</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest designs and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Elegant Designs. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    productCards.forEach(card => {
+                        if(filterValue === 'all') {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            
+                            if(categories.includes(filterValue)) {
+                                card.style.display = 'block';
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0)';
+                                }, 50);
+                            } else {
+                                card.style.opacity = '0';
+                                card.style.transform = 'translateY(20px)';
+                                setTimeout(() => {
+                                    card.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Back to top button functionality
+            const backToTopBtn = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if(window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="bottom-nav.js"></script>
+</body>
+</html>

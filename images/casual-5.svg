@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f5f5" />
+      <stop offset="100%" stop-color="#e8e5e5" />
+    </linearGradient>
+    <pattern id="silk-texture" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#e8e5e5" opacity="0.1" />
+      <path d="M0,0 L20,20 M20,0 L0,20" stroke="#d8d5d5" stroke-width="0.5" opacity="0.2" />
+    </pattern>
+    <linearGradient id="shine-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="800" fill="url(#bg-gradient)" />
+  
+  <!-- Texture overlay -->
+  <rect width="800" height="800" fill="url(#silk-texture)" />
+  
+  <!-- Subtle Shine Light Silk Blouse illustration -->
+  <g transform="translate(400, 400)">
+    <!-- Blouse outline -->
+    <path d="M-200,-250 C-180,-270 -150,-280 -120,-280 L120,-280 C150,-280 180,-270 200,-250 L200,150 C180,170 150,180 120,180 L-120,180 C-150,180 -180,170 -200,150 Z" fill="#f8f5f5" stroke="#d8d5d5" stroke-width="4" />
+    
+    <!-- Shine effect overlay -->
+    <path d="M-180,-230 C-160,-250 -140,-260 -110,-260 L110,-260 C140,-260 160,-250 180,-230 L180,130 C160,150 140,160 110,160 L-110,160 C-140,160 -160,150 -180,130 Z" fill="url(#shine-gradient)" opacity="0.7" />
+    
+    <!-- Elegant boat neckline -->
+    <path d="M-100,-280 C-50,-310 50,-310 100,-280" fill="none" stroke="#d8d5d5" stroke-width="4" />
+    
+    <!-- Sleeve left -->
+    <path d="M-200,-200 C-240,-170 -270,-120 -290,-60" fill="none" stroke="#d8d5d5" stroke-width="4" />
+    
+    <!-- Sleeve right -->
+    <path d="M200,-200 C240,-170 270,-120 290,-60" fill="none" stroke="#d8d5d5" stroke-width="4" />
+    
+    <!-- Subtle thread work pattern -->
+    <g fill="none" stroke="#c8c5c5" stroke-width="1.5">
+      <!-- Delicate neckline embellishment -->
+      <path d="M-90,-270 C-80,-275 -70,-270 -60,-275 C-50,-280 -40,-275 -30,-280 C-20,-285 -10,-280 0,-285 C10,-280 20,-285 30,-280 C40,-275 50,-280 60,-275 C70,-270 80,-275 90,-270" />
+      
+      <!-- Left side subtle pattern -->
+      <g transform="translate(-120, -100)">
+        <path d="M-20,-20 C-10,-30 0,-20 10,-30 C20,-40 30,-30 40,-20" />
+        <path d="M-20,0 C-10,-10 0,0 10,-10 C20,-20 30,-10 40,0" />
+        <path d="M-20,20 C-10,10 0,20 10,10 C20,0 30,10 40,20" />
+      </g>
+      
+      <!-- Right side subtle pattern -->
+      <g transform="translate(120, -100)">
+        <path d="M-40,-20 C-30,-30 -20,-20 -10,-30 C0,-40 10,-30 20,-20" />
+        <path d="M-40,0 C-30,-10 -20,0 -10,-10 C0,-20 10,-10 20,0" />
+        <path d="M-40,20 C-30,10 -20,20 -10,10 C0,0 10,10 20,20" />
+      </g>
+      
+      <!-- Center subtle design -->
+      <g transform="translate(0, 0)">
+        <path d="M-30,-30 C-20,-40 -10,-30 0,-40 C10,-30 20,-40 30,-30" />
+        <path d="M-30,0 C-20,-10 -10,0 0,-10 C10,0 20,-10 30,0" />
+        <path d="M-30,30 C-20,20 -10,30 0,20 C10,30 20,20 30,30" />
+      </g>
+      
+      <!-- Bottom hem subtle detail -->
+      <path d="M-150,150 C-130,140 -110,150 -90,140 C-70,130 -50,140 -30,130 C-10,120 10,130 30,120 C50,110 70,120 90,110 C110,100 130,110 150,100" />
+    </g>
+    
+    <!-- Subtle shine details -->
+    <g fill="#fff" opacity="0.2">
+      <ellipse cx="-100" cy="-150" rx="30" ry="10" />
+      <ellipse cx="100" cy="-150" rx="30" ry="10" />
+      <ellipse cx="0" cy="50" rx="50" ry="15" />
+    </g>
+  </g>
+  
+  <!-- Product label -->
+  <g transform="translate(400, 650)">
+    <rect x="-150" y="-40" width="300" height="80" rx="10" ry="10" fill="#fff" stroke="#d8d5d5" stroke-width="2" />
+    
+    <!-- Product name -->
+    <text x="0" y="-10" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="bold" fill="#8a8585" text-anchor="middle">Subtle Shine</text>
+    
+    <!-- Product description -->
+    <text x="0" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#8a8585" text-anchor="middle">Light silk with subtle thread work</text>
+  </g>
+</svg>

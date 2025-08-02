@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Collections | Elegant Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="all-collections-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles specific to all collections page */
+        .collections-banner {
+            height: 40vh;
+            background-image: url('images/all-collections-banner.svg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .collections-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .collections-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .collections-description {
+            padding: 60px 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .collections-description p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .filter-sort-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+        
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-btn {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .sort-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sort-container label {
+            font-weight: 500;
+        }
+        
+        .sort-select {
+            padding: 8px 15px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sort-select:hover, .sort-select:focus {
+            border-color: #d4af37;
+            outline: none;
+        }
+        
+        .advanced-filters {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .filter-group h4 {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .toggle-advanced-filters {
+            background: none;
+            border: none;
+            color: #d4af37;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .toggle-advanced-filters:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        
+        .toggle-advanced-filters i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-advanced-filters.active i {
+            transform: rotate(180deg);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 5% 80px;
+        }
+        
+        /* Laptop view - 3 column grid */
+        @media (min-width: 992px) and (max-width: 1400px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px 0;
+            color: #666;
+        }
+        
+        .no-results i {
+            font-size: 3rem;
+            color: #ddd;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #d4af37;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(20px);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .filter-sort-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .sort-container {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .sort-select {
+                flex-grow: 1;
+                max-width: 200px;
+            }
+            
+            .filter-group {
+                width: 100%;
+            }
+        }
+        
+        /* Base WhatsApp button size for all screens */
+        .whatsapp-btn {
+            font-size: 0.9rem;
+            padding: 8px 15px;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .whatsapp-btn i {
+            font-size: 1rem;
+            margin-right: 6px;
+            flex-shrink: 0;
+        }
+        
+        /* Laptop view - adjust WhatsApp button size */
+        @media (min-width: 992px) and (max-width: 1400px) {
+            .whatsapp-btn {
+                font-size: 0.75rem;
+                padding: 5px 8px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 0.85rem;
+                margin-right: 3px;
+            }
+        }
+        
+        /* Large screens - ensure WhatsApp button stays compact */
+        @media (min-width: 1401px) {
+            .whatsapp-btn {
+                font-size: 0.85rem;
+                padding: 7px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/elegant-logo.svg" alt="Elegant Designs Logo">
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="all-collections.html" class="active">All Collections</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-logo">
+                    <img src="images/elegant-logo.svg" alt="Elegant Designs Logo" />
+                    <h3>Elegant Designs</h3>
+                </div>
+            </div>
+            
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="index.html#categories"><i class="fas fa-th-large"></i>Categories</a></li>
+                <li><a href="all-collections.html"><i class="fas fa-shopping-bag"></i>All Collections</a></li>
+                <li><a href="index.html#featured"><i class="fas fa-star"></i>Featured</a></li>
+                <li><a href="index.html#about"><i class="fas fa-info-circle"></i>About Us</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+            
+            <div class="mobile-nav-footer">
+                <div class="mobile-nav-contact">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +91 7675971677</p>
+                    <p><i class="fas fa-envelope"></i> info@elegantdesigns.com</p>
+                </div>
+                <div class="mobile-nav-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay"></div>
+    </header>
+
+    <section class="collections-banner">
+        <div>
+            <h1>All Collections</h1>
+            <p>Explore our complete range of elegant designs across all categories</p>
+        </div>
+    </section>
+
+    <section class="collections-description">
+        <h2 class="section-title">Browse Our Complete Collection</h2>
+        <p>Discover our entire range of exquisite designs in one place. From wedding blouses to casual wear, maggam work to designer pieces, for both women and kids - our complete collection showcases the finest craftsmanship and elegant designs.</p>
+        <p>Use the filters below to find exactly what you're looking for, or browse through our entire collection to find your perfect piece.</p>
+        
+        <div class="filter-sort-container">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Designs</button>
+                <button class="filter-btn" data-filter="wedding">Wedding</button>
+                <button class="filter-btn" data-filter="casual">Casual</button>
+                <button class="filter-btn" data-filter="maggam">Maggam</button>
+                <button class="filter-btn" data-filter="designer">Designer</button>
+            </div>
+            
+            <div class="sort-container">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select" class="sort-select">
+                    <option value="default">Featured</option>
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="newest">Newest First</option>
+                </select>
+            </div>
+            
+            <button class="toggle-advanced-filters">Advanced Filters <i class="fas fa-chevron-down"></i></button>
+            
+            <div class="advanced-filters" style="display: none;">
+                <div class="filter-group">
+                    <h4>Age Group</h4>
+                    <div class="filter-options">
+                        <button class="filter-btn" data-age-filter="all">All</button>
+                        <button class="filter-btn" data-age-filter="women">Women</button>
+                        <button class="filter-btn" data-age-filter="kids">Kids</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Material</h4>
+                    <div class="filter-options">
+                        <button class="filter-btn" data-material-filter="all">All</button>
+                        <button class="filter-btn" data-material-filter="cotton">Cotton</button>
+                        <button class="filter-btn" data-material-filter="silk">Silk</button>
+                        <button class="filter-btn" data-material-filter="linen">Linen</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Style</h4>
+                    <div class="filter-options">
+                        <button class="filter-btn" data-style-filter="all">All</button>
+                        <button class="filter-btn" data-style-filter="floral">Floral</button>
+                        <button class="filter-btn" data-style-filter="traditional">Traditional</button>
+                        <button class="filter-btn" data-style-filter="contemporary">Contemporary</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="products-grid" id="allProductsGrid">
+        <!-- Products will be dynamically loaded here -->
+    </div>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Elegant Designs</h2>
+                <p>Exquisite Blouses & Maggam Work</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="all-collections.html">All Collections</a></li>
+                    <li><a href="index.html#featured">Featured</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest designs and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Elegant Designs. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Load script.js first to initialize siteConfig and products -->
+    <script src="script.js"></script>
+    <!-- Wait for script.js to initialize before loading all-collections.js -->
+    <script>
+        // Ensure script.js has fully initialized siteConfig before loading all-collections.js
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded in all-collections.html');
+            // Check if siteConfig is initialized
+            if (typeof window.siteConfig === 'undefined') {
+                console.error('siteConfig not found, initializing it');
+                if (typeof window.initializeSiteConfig === 'function') {
+                    window.initializeSiteConfig();
+                }
+            }
+            
+            // Check if products are initialized
+            if (!window.siteConfig.products || window.siteConfig.products.length === 0) {
+                console.log('Products not initialized, initializing them');
+                if (typeof window.initializeProducts === 'function') {
+                    window.initializeProducts();
+                }
+            }
+            
+            console.log('siteConfig status before loading all-collections.js:', window.siteConfig);
+            console.log('Products count before loading all-collections.js:', 
+                window.siteConfig && window.siteConfig.products ? window.siteConfig.products.length : 0);
+        });
+    </script>
+    <script src="all-collections.js"></script>
+    <script src="bottom-nav.js"></script>
+</body>
+</html>

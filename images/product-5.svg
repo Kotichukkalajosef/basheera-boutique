@@ -1,0 +1,68 @@
+<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A3093" />
+      <stop offset="100%" stop-color="#a044ff" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rectangle -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  
+  <!-- Decorative elements -->
+  <g opacity="0.3" fill="#ffffff">
+    <!-- Stylized wedding blouse outline with elaborate details -->
+    <path d="M200 100 Q280 120 300 200 Q320 280 300 360 Q280 440 200 460 Q120 440 100 360 Q80 280 100 200 Q120 120 200 100 Z" stroke="#ffffff" stroke-width="3" fill="none" />
+    
+    <!-- Elaborate wedding maggam work patterns -->
+    <circle cx="200" cy="200" r="45" fill="none" stroke="#ffffff" stroke-width="2" />
+    <circle cx="200" cy="200" r="40" fill="none" stroke="#ffffff" stroke-width="1" />
+    <circle cx="200" cy="200" r="35" fill="none" stroke="#ffffff" stroke-width="2" />
+    <circle cx="200" cy="200" r="30" fill="none" stroke="#ffffff" stroke-width="1" />
+    
+    <!-- Central floral design element -->
+    <path d="M180 180 Q200 160 220 180 Q240 200 220 220 Q200 240 180 220 Q160 200 180 180 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+    <path d="M190 190 Q200 180 210 190 Q220 200 210 210 Q200 220 190 210 Q180 200 190 190 Z" fill="none" stroke="#ffffff" stroke-width="1" />
+    <circle cx="200" cy="200" r="5" fill="#ffffff" />
+    
+    <!-- Elaborate floral patterns -->
+    <path d="M150 150 Q170 130 190 150 Q210 170 190 190 Q170 210 150 190 Q130 170 150 150 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+    <path d="M250 150 Q270 130 290 150 Q310 170 290 190 Q270 210 250 190 Q230 170 250 150 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+    
+    <!-- Lower design elements -->
+    <path d="M150 250 Q170 230 190 250 Q210 270 190 290 Q170 310 150 290 Q130 270 150 250 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+    <path d="M250 250 Q270 230 290 250 Q310 270 290 290 Q270 310 250 290 Q230 270 250 250 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+    
+    <!-- Decorative dots representing stones and beads -->
+    <circle cx="160" cy="160" r="3" />
+    <circle cx="240" cy="160" r="3" />
+    <circle cx="160" cy="240" r="3" />
+    <circle cx="240" cy="240" r="3" />
+    <circle cx="180" cy="180" r="2" />
+    <circle cx="220" cy="180" r="2" />
+    <circle cx="180" cy="220" r="2" />
+    <circle cx="220" cy="220" r="2" />
+    
+    <!-- Elaborate border pattern -->
+    <rect x="130" y="300" width="140" height="30" fill="none" stroke="#ffffff" stroke-width="1" />
+    <rect x="140" y="310" width="120" height="10" fill="none" stroke="#ffffff" stroke-width="1" />
+    
+    <!-- Decorative border -->
+    <rect x="50" y="50" width="300" height="400" rx="5" ry="5" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="5,5" />
+  </g>
+  
+  <!-- Text label -->
+  <text x="200" y="450" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Wedding Blouse Design 5</text>
+  <text x="200" y="475" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">Purple silk with floral maggam work</text>
+  
+  <!-- Subtle texture overlay -->
+  <rect width="100%" height="100%" fill="url(#noise)" opacity="0.05" />
+  
+  <defs>
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+  </defs>
+</svg>

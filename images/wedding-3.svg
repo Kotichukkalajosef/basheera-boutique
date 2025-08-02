@@ -1,0 +1,120 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2980b9" />
+      <stop offset="100%" stop-color="#1a5276" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  
+  <!-- Stylized Silk Blouse Outline -->
+  <g transform="translate(400, 300)">
+    <!-- Blouse Body -->
+    <path d="M -150,-120 C -120,-130 -80,-130 -50,-120 L -50,0 C -80,30 -120,30 -150,0 Z" fill="#2874a6" opacity="0.8" />
+    <path d="M 150,-120 C 120,-130 80,-130 50,-120 L 50,0 C 80,30 120,30 150,0 Z" fill="#2874a6" opacity="0.8" />
+    
+    <!-- Neckline -->
+    <path d="M -50,-120 C -30,-150 30,-150 50,-120" fill="none" stroke="#f0f0f0" stroke-width="4" />
+    
+    <!-- Decorative Pearl and Crystal Work -->
+    <g>
+      <!-- Left Side Pearl Pattern -->
+      <path d="M -120,-100 C -100,-110 -80,-90 -60,-100" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      <path d="M -130,-80 C -110,-90 -90,-70 -70,-80" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      <path d="M -140,-60 C -120,-70 -100,-50 -80,-60" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      <path d="M -130,-40 C -110,-50 -90,-30 -70,-40" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      <path d="M -120,-20 C -100,-30 -80,-10 -60,-20" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      
+      <!-- Right Side Pearl Pattern -->
+      <path d="M 120,-100 C 100,-110 80,-90 60,-100" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      <path d="M 130,-80 C 110,-90 90,-70 70,-80" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      <path d="M 140,-60 C 120,-70 100,-50 80,-60" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      <path d="M 130,-40 C 110,-50 90,-30 70,-40" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      <path d="M 120,-20 C 100,-30 80,-10 60,-20" stroke="#f0f0f0" stroke-width="2" fill="none" />
+      
+      <!-- Center Elaborate Embellishment -->
+      <circle cx="0" cy="-90" r="25" fill="none" stroke="#f0f0f0" stroke-width="2" />
+      <circle cx="0" cy="-90" r="18" fill="none" stroke="#f0f0f0" stroke-width="1.5" />
+      <circle cx="0" cy="-90" r="10" fill="#f0f0f0" opacity="0.9" />
+      
+      <!-- Pearl Pattern Elements -->
+      <path d="M -20,-90 C -15,-100 -5,-100 0,-90 C 5,-100 15,-100 20,-90" stroke="#f0f0f0" stroke-width="1.5" fill="none" />
+      <path d="M -20,-80 C -15,-70 -5,-70 0,-80 C 5,-70 15,-70 20,-80" stroke="#f0f0f0" stroke-width="1.5" fill="none" />
+      
+      <!-- Decorative Pearls and Crystals -->
+      <!-- Left Side -->
+      <circle cx="-100" cy="-100" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="-80" cy="-90" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="-60" cy="-100" r="3" fill="#f0f0f0" opacity="0.9" />
+      
+      <circle cx="-110" cy="-80" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="-90" cy="-70" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="-70" cy="-80" r="2" fill="#e6e6fa" opacity="0.8" />
+      
+      <circle cx="-120" cy="-60" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="-100" cy="-50" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="-80" cy="-60" r="3" fill="#f0f0f0" opacity="0.9" />
+      
+      <circle cx="-110" cy="-40" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="-90" cy="-30" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="-70" cy="-40" r="2" fill="#e6e6fa" opacity="0.8" />
+      
+      <circle cx="-100" cy="-20" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="-80" cy="-10" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="-60" cy="-20" r="3" fill="#f0f0f0" opacity="0.9" />
+      
+      <!-- Right Side -->
+      <circle cx="100" cy="-100" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="80" cy="-90" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="60" cy="-100" r="3" fill="#f0f0f0" opacity="0.9" />
+      
+      <circle cx="110" cy="-80" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="90" cy="-70" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="70" cy="-80" r="2" fill="#e6e6fa" opacity="0.8" />
+      
+      <circle cx="120" cy="-60" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="100" cy="-50" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="80" cy="-60" r="3" fill="#f0f0f0" opacity="0.9" />
+      
+      <circle cx="110" cy="-40" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="90" cy="-30" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="70" cy="-40" r="2" fill="#e6e6fa" opacity="0.8" />
+      
+      <circle cx="100" cy="-20" r="3" fill="#f0f0f0" opacity="0.9" />
+      <circle cx="80" cy="-10" r="2" fill="#e6e6fa" opacity="0.8" />
+      <circle cx="60" cy="-20" r="3" fill="#f0f0f0" opacity="0.9" />
+      
+      <!-- Additional Pearl Clusters -->
+      <g transform="translate(-30, -60)">
+        <circle cx="0" cy="0" r="3" fill="#f0f0f0" opacity="0.9" />
+        <circle cx="6" cy="2" r="2" fill="#e6e6fa" opacity="0.8" />
+        <circle cx="3" cy="6" r="2.5" fill="#f0f0f0" opacity="0.9" />
+      </g>
+      
+      <g transform="translate(30, -60)">
+        <circle cx="0" cy="0" r="3" fill="#f0f0f0" opacity="0.9" />
+        <circle cx="-6" cy="2" r="2" fill="#e6e6fa" opacity="0.8" />
+        <circle cx="-3" cy="6" r="2.5" fill="#f0f0f0" opacity="0.9" />
+      </g>
+      
+      <g transform="translate(-20, -30)">
+        <circle cx="0" cy="0" r="3" fill="#f0f0f0" opacity="0.9" />
+        <circle cx="5" cy="-3" r="2" fill="#e6e6fa" opacity="0.8" />
+        <circle cx="-3" cy="-5" r="2.5" fill="#f0f0f0" opacity="0.9" />
+      </g>
+      
+      <g transform="translate(20, -30)">
+        <circle cx="0" cy="0" r="3" fill="#f0f0f0" opacity="0.9" />
+        <circle cx="-5" cy="-3" r="2" fill="#e6e6fa" opacity="0.8" />
+        <circle cx="3" cy="-5" r="2.5" fill="#f0f0f0" opacity="0.9" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Product Label -->
+  <g transform="translate(400, 500)">
+    <rect x="-150" y="-20" width="300" height="40" rx="5" fill="rgba(0,0,0,0.7)" />
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">Pearl Elegance</text>
+  </g>
+</svg>

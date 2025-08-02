@@ -1,0 +1,215 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f0f0" />
+      <stop offset="100%" stop-color="#e0e0e0" />
+    </linearGradient>
+    <linearGradient id="blouse-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e4053" />
+      <stop offset="100%" stop-color="#1c2833" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3" />
+    </filter>
+    <pattern id="gold-thread" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#d4af37" />
+      <path d="M0,2 L4,2 M2,0 L2,4" stroke="#e5c158" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Background rectangle -->
+  <rect width="600" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Product title -->
+  <text x="300" y="40" font-family="'Segoe UI', Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">Geometric Harmony</text>
+  <text x="300" y="70" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#666" text-anchor="middle">Modern geometric maggam patterns</text>
+  
+  <!-- Blouse design - Geometric Harmony with modern maggam patterns -->
+  <g transform="translate(300, 300)">
+    <!-- Main blouse shape -->
+    <path d="M-150,-100 C-140,-140 -70,-150 0,-150 C70,-150 140,-140 150,-100 L170,100 C170,140 140,170 100,180 L0,200 L-100,180 C-140,170 -170,140 -170,100 Z" 
+          fill="url(#blouse-gradient)" stroke="#333" stroke-width="2" filter="url(#shadow)" />
+    
+    <!-- Geometric maggam embroidery -->
+    <g>
+      <!-- Central geometric pattern -->
+      <g transform="translate(0, 0)">
+        <!-- Outer diamond -->
+        <path d="M0,-80 L60,0 L0,80 L-60,0 Z" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+        
+        <!-- Inner diamond -->
+        <path d="M0,-50 L40,0 L0,50 L-40,0 Z" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="3" />
+        
+        <!-- Center diamond -->
+        <path d="M0,-20 L15,0 L0,20 L-15,0 Z" 
+              fill="url(#gold-thread)" />
+        
+        <!-- Connecting lines -->
+        <g stroke="url(#gold-thread)" stroke-width="2" fill="none">
+          <line x1="0" y1="-80" x2="0" y2="-50" />
+          <line x1="60" y1="0" x2="40" y2="0" />
+          <line x1="0" y1="80" x2="0" y2="50" />
+          <line x1="-60" y1="0" x2="-40" y2="0" />
+          
+          <!-- Diagonal connectors -->
+          <line x1="30" y1="-40" x2="20" y2="-25" />
+          <line x1="30" y1="40" x2="20" y2="25" />
+          <line x1="-30" y1="40" x2="-20" y2="25" />
+          <line x1="-30" y1="-40" x2="-20" y2="-25" />
+        </g>
+        
+        <!-- Decorative elements at corners -->
+        <g>
+          <!-- Top corner -->
+          <circle cx="0" cy="-80" r="5" fill="url(#gold-thread)" />
+          <path d="M-10,-90 C-5,-100 5,-100 10,-90" stroke="url(#gold-thread)" stroke-width="2" fill="none" />
+          
+          <!-- Right corner -->
+          <circle cx="60" cy="0" r="5" fill="url(#gold-thread)" />
+          <path d="M70,-10 C80,-5 80,5 70,10" stroke="url(#gold-thread)" stroke-width="2" fill="none" />
+          
+          <!-- Bottom corner -->
+          <circle cx="0" cy="80" r="5" fill="url(#gold-thread)" />
+          <path d="M-10,90 C-5,100 5,100 10,90" stroke="url(#gold-thread)" stroke-width="2" fill="none" />
+          
+          <!-- Left corner -->
+          <circle cx="-60" cy="0" r="5" fill="url(#gold-thread)" />
+          <path d="M-70,-10 C-80,-5 -80,5 -70,10" stroke="url(#gold-thread)" stroke-width="2" fill="none" />
+        </g>
+      </g>
+      
+      <!-- Additional geometric patterns -->
+      <g>
+        <!-- Top left pattern -->
+        <g transform="translate(-100, -80)">
+          <rect x="-15" y="-15" width="30" height="30" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <rect x="-10" y="-10" width="20" height="20" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <rect x="-5" y="-5" width="10" height="10" 
+                fill="url(#gold-thread)" />
+        </g>
+        
+        <!-- Top right pattern -->
+        <g transform="translate(100, -80)">
+          <rect x="-15" y="-15" width="30" height="30" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <rect x="-10" y="-10" width="20" height="20" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <rect x="-5" y="-5" width="10" height="10" 
+                fill="url(#gold-thread)" />
+        </g>
+        
+        <!-- Bottom left pattern -->
+        <g transform="translate(-100, 80)">
+          <rect x="-15" y="-15" width="30" height="30" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <rect x="-10" y="-10" width="20" height="20" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <rect x="-5" y="-5" width="10" height="10" 
+                fill="url(#gold-thread)" />
+        </g>
+        
+        <!-- Bottom right pattern -->
+        <g transform="translate(100, 80)">
+          <rect x="-15" y="-15" width="30" height="30" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <rect x="-10" y="-10" width="20" height="20" 
+                fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+          <rect x="-5" y="-5" width="10" height="10" 
+                fill="url(#gold-thread)" />
+        </g>
+      </g>
+      
+      <!-- Border patterns -->
+      <g stroke="url(#gold-thread)" stroke-width="2" fill="none">
+        <!-- Neckline border with geometric pattern -->
+        <path d="M-60,-130 C-40,-150 40,-150 60,-130" />
+        
+        <!-- Geometric elements along neckline -->
+        <g>
+          <rect x="-50" y="-145" width="10" height="10" transform="rotate(45, -45, -140)" />
+          <rect x="-20" y="-148" width="10" height="10" transform="rotate(45, -15, -143)" />
+          <rect x="10" y="-148" width="10" height="10" transform="rotate(45, 15, -143)" />
+          <rect x="40" y="-145" width="10" height="10" transform="rotate(45, 45, -140)" />
+        </g>
+        
+        <!-- Bottom border with zigzag pattern -->
+        <path d="M-80,120 L-60,140 L-40,120 L-20,140 L0,120 L20,140 L40,120 L60,140 L80,120" />
+        
+        <!-- Side borders with triangle patterns -->
+        <g>
+          <!-- Left side triangles -->
+          <path d="M-160,-50 L-140,-40 L-160,-30 Z" />
+          <path d="M-160,-10 L-140,0 L-160,10 Z" />
+          <path d="M-160,30 L-140,40 L-160,50 Z" />
+          
+          <!-- Right side triangles -->
+          <path d="M160,-50 L140,-40 L160,-30 Z" />
+          <path d="M160,-10 L140,0 L160,10 Z" />
+          <path d="M160,30 L140,40 L160,50 Z" />
+        </g>
+      </g>
+    </g>
+    
+    <!-- Sleeve outlines -->
+    <path d="M-150,-100 C-160,-50 -170,0 -170,100" stroke="#333" stroke-width="2" fill="none" />
+    <path d="M150,-100 C160,-50 170,0 170,100" stroke="#333" stroke-width="2" fill="none" />
+    
+    <!-- Sleeve embroidery - geometric patterns -->
+    <g>
+      <!-- Left sleeve patterns -->
+      <g transform="translate(-160, -70)">
+        <rect x="-10" y="-10" width="20" height="20" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        <rect x="-5" y="-5" width="10" height="10" 
+              fill="url(#gold-thread)" />
+      </g>
+      
+      <g transform="translate(-160, 0)">
+        <path d="M-10,-10 L10,10 M-10,10 L10,-10" 
+              stroke="url(#gold-thread)" stroke-width="2" />
+        <circle cx="0" cy="0" r="5" 
+                fill="url(#gold-thread)" />
+      </g>
+      
+      <g transform="translate(-160, 70)">
+        <path d="M0,-10 L10,0 L0,10 L-10,0 Z" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        <circle cx="0" cy="0" r="5" 
+                fill="url(#gold-thread)" />
+      </g>
+      
+      <!-- Right sleeve patterns -->
+      <g transform="translate(160, -70)">
+        <rect x="-10" y="-10" width="20" height="20" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        <rect x="-5" y="-5" width="10" height="10" 
+              fill="url(#gold-thread)" />
+      </g>
+      
+      <g transform="translate(160, 0)">
+        <path d="M-10,-10 L10,10 M-10,10 L10,-10" 
+              stroke="url(#gold-thread)" stroke-width="2" />
+        <circle cx="0" cy="0" r="5" 
+                fill="url(#gold-thread)" />
+      </g>
+      
+      <g transform="translate(160, 70)">
+        <path d="M0,-10 L10,0 L0,10 L-10,0 Z" 
+              fill="none" stroke="url(#gold-thread)" stroke-width="2" />
+        <circle cx="0" cy="0" r="5" 
+                fill="url(#gold-thread)" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Contemporary label -->
+  <g transform="translate(300, 520)">
+    <rect x="-100" y="-20" width="200" height="40" rx="5" ry="5" fill="#2e4053" />
+    <text x="0" y="5" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">CONTEMPORARY</text>
+  </g>
+</svg>
